@@ -9,7 +9,6 @@ let tx_data = "0xe70dd2fc0000000000000000000000000000000000000000000000000000000
 for the current abi in `src/abi.json` returns:
 ```
 CreateDecreasePosition(CreateDecreasePositionCall { path: [0xff970a61a04b1ca14834a43f5de4533ebddb5cc8], index_token: 0x82af49447d8a07e3bd95bd0d56f35241523fbab1, collateral_delta: 449391823907218545570703489342, size_delta: 900000000000000000000000000000, is_long: false, receiver: 0x82828f6aff831e0d8b366d7b33caf12b39232772, acceptable_price: 1332846580000000000000000000000000, min_out: 0, execution_fee: 100000000000000, withdraw_eth: false })
-degatchi@DeGatchi tx-decoder % 
 ```
 
 ## Quick start
