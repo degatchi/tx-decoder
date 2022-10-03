@@ -18,7 +18,7 @@ pub mod b_contract {
     use std::sync::Arc;
     pub static B_CONTRACT_ABI: ethers::contract::Lazy<ethers::core::abi::Abi> =
         ethers::contract::Lazy::new(|| {
-            ethers :: core :: utils :: __serde_json :: from_str ("[\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_vault\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_router\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_weth\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_depositFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_minExecutionFee\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"constructor\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": true,\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address[]\",\n                \"name\": \"path\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"collateralDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"bool\",\n                \"name\": \"isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"receiver\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"blockGap\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"timeGap\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"CancelDecreasePosition\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": true,\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address[]\",\n                \"name\": \"path\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"amountIn\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"bool\",\n                \"name\": \"isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"blockGap\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"timeGap\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"CancelIncreasePosition\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": true,\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address[]\",\n                \"name\": \"path\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"collateralDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"bool\",\n                \"name\": \"isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"receiver\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"index\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"blockNumber\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"blockTime\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"CreateDecreasePosition\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": true,\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address[]\",\n                \"name\": \"path\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"amountIn\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"bool\",\n                \"name\": \"isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"index\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"blockNumber\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"blockTime\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"gasPrice\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"CreateIncreasePosition\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"marginFeeBasisPoints\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"bytes32\",\n                \"name\": \"referralCode\",\n                \"type\": \"bytes32\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"referrer\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"DecreasePositionReferral\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": true,\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address[]\",\n                \"name\": \"path\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"collateralDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"bool\",\n                \"name\": \"isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"receiver\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"blockGap\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"timeGap\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"ExecuteDecreasePosition\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": true,\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address[]\",\n                \"name\": \"path\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"amountIn\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"bool\",\n                \"name\": \"isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"blockGap\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"timeGap\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"ExecuteIncreasePosition\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"marginFeeBasisPoints\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"bytes32\",\n                \"name\": \"referralCode\",\n                \"type\": \"bytes32\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"referrer\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"IncreasePositionReferral\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"admin\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"SetAdmin\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"minBlockDelayKeeper\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"minTimeDelayPublic\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"maxTimeDelay\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"SetDelayValues\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"depositFee\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"SetDepositFee\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"increasePositionBufferBps\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"SetIncreasePositionBufferBps\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"bool\",\n                \"name\": \"isLeverageEnabled\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"name\": \"SetIsLeverageEnabled\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"address[]\",\n                \"name\": \"tokens\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256[]\",\n                \"name\": \"longSizes\",\n                \"type\": \"uint256[]\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256[]\",\n                \"name\": \"shortSizes\",\n                \"type\": \"uint256[]\"\n            }\n        ],\n        \"name\": \"SetMaxGlobalSizes\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"minExecutionFee\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"SetMinExecutionFee\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": true,\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"bool\",\n                \"name\": \"isActive\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"name\": \"SetPositionKeeper\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"referralStorage\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"SetReferralStorage\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"increasePositionRequestKeysStart\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"decreasePositionRequestKeysStart\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"SetRequestKeysStartValues\",\n        \"type\": \"event\"\n    },\n    {\n        \"anonymous\": false,\n        \"inputs\": [\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"token\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"address\",\n                \"name\": \"receiver\",\n                \"type\": \"address\"\n            },\n            {\n                \"indexed\": false,\n                \"internalType\": \"uint256\",\n                \"name\": \"amount\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"WithdrawFees\",\n        \"type\": \"event\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"BASIS_POINTS_DIVISOR\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"admin\",\n        \"outputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_token\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_spender\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_amount\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"approve\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"_key\",\n                \"type\": \"bytes32\"\n            },\n            {\n                \"internalType\": \"address payable\",\n                \"name\": \"_executionFeeReceiver\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"cancelDecreasePosition\",\n        \"outputs\": [\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"_key\",\n                \"type\": \"bytes32\"\n            },\n            {\n                \"internalType\": \"address payable\",\n                \"name\": \"_executionFeeReceiver\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"cancelIncreasePosition\",\n        \"outputs\": [\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address[]\",\n                \"name\": \"_path\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_collateralDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"_isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_receiver\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"_withdrawETH\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"name\": \"createDecreasePosition\",\n        \"outputs\": [],\n        \"stateMutability\": \"payable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address[]\",\n                \"name\": \"_path\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_amountIn\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"_isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"_referralCode\",\n                \"type\": \"bytes32\"\n            }\n        ],\n        \"name\": \"createIncreasePosition\",\n        \"outputs\": [],\n        \"stateMutability\": \"payable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address[]\",\n                \"name\": \"_path\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"_isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"_referralCode\",\n                \"type\": \"bytes32\"\n            }\n        ],\n        \"name\": \"createIncreasePositionETH\",\n        \"outputs\": [],\n        \"stateMutability\": \"payable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"decreasePositionRequestKeys\",\n        \"outputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"\",\n                \"type\": \"bytes32\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"decreasePositionRequestKeysStart\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"\",\n                \"type\": \"bytes32\"\n            }\n        ],\n        \"name\": \"decreasePositionRequests\",\n        \"outputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"collateralDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"receiver\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"blockNumber\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"blockTime\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"withdrawETH\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"decreasePositionsIndex\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"depositFee\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"_key\",\n                \"type\": \"bytes32\"\n            },\n            {\n                \"internalType\": \"address payable\",\n                \"name\": \"_executionFeeReceiver\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"executeDecreasePosition\",\n        \"outputs\": [\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_endIndex\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"address payable\",\n                \"name\": \"_executionFeeReceiver\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"executeDecreasePositions\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"_key\",\n                \"type\": \"bytes32\"\n            },\n            {\n                \"internalType\": \"address payable\",\n                \"name\": \"_executionFeeReceiver\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"executeIncreasePosition\",\n        \"outputs\": [\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_endIndex\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"address payable\",\n                \"name\": \"_executionFeeReceiver\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"executeIncreasePositions\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"feeReserves\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"_key\",\n                \"type\": \"bytes32\"\n            }\n        ],\n        \"name\": \"getDecreasePositionRequestPath\",\n        \"outputs\": [\n            {\n                \"internalType\": \"address[]\",\n                \"name\": \"\",\n                \"type\": \"address[]\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"_key\",\n                \"type\": \"bytes32\"\n            }\n        ],\n        \"name\": \"getIncreasePositionRequestPath\",\n        \"outputs\": [\n            {\n                \"internalType\": \"address[]\",\n                \"name\": \"\",\n                \"type\": \"address[]\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_account\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_index\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"getRequestKey\",\n        \"outputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"\",\n                \"type\": \"bytes32\"\n            }\n        ],\n        \"stateMutability\": \"pure\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"getRequestQueueLengths\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"gov\",\n        \"outputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"increasePositionBufferBps\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"increasePositionRequestKeys\",\n        \"outputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"\",\n                \"type\": \"bytes32\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"increasePositionRequestKeysStart\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"bytes32\",\n                \"name\": \"\",\n                \"type\": \"bytes32\"\n            }\n        ],\n        \"name\": \"increasePositionRequests\",\n        \"outputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"account\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"indexToken\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"amountIn\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"minOut\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"sizeDelta\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"isLong\",\n                \"type\": \"bool\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"acceptablePrice\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"executionFee\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"blockNumber\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"blockTime\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"hasCollateralInETH\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"increasePositionsIndex\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"isLeverageEnabled\",\n        \"outputs\": [\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"isPositionKeeper\",\n        \"outputs\": [\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"maxGlobalLongSizes\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"maxGlobalShortSizes\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"maxTimeDelay\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"minBlockDelayKeeper\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"minExecutionFee\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"minTimeDelayPublic\",\n        \"outputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"referralStorage\",\n        \"outputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"router\",\n        \"outputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address payable\",\n                \"name\": \"_receiver\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_amount\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"sendValue\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_admin\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"setAdmin\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_minBlockDelayKeeper\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_minTimeDelayPublic\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_maxTimeDelay\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"setDelayValues\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_depositFee\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"setDepositFee\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_gov\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"setGov\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_increasePositionBufferBps\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"setIncreasePositionBufferBps\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"_isLeverageEnabled\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"name\": \"setIsLeverageEnabled\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address[]\",\n                \"name\": \"_tokens\",\n                \"type\": \"address[]\"\n            },\n            {\n                \"internalType\": \"uint256[]\",\n                \"name\": \"_longSizes\",\n                \"type\": \"uint256[]\"\n            },\n            {\n                \"internalType\": \"uint256[]\",\n                \"name\": \"_shortSizes\",\n                \"type\": \"uint256[]\"\n            }\n        ],\n        \"name\": \"setMaxGlobalSizes\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_minExecutionFee\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"setMinExecutionFee\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_account\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"bool\",\n                \"name\": \"_isActive\",\n                \"type\": \"bool\"\n            }\n        ],\n        \"name\": \"setPositionKeeper\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_referralStorage\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"setReferralStorage\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_increasePositionRequestKeysStart\",\n                \"type\": \"uint256\"\n            },\n            {\n                \"internalType\": \"uint256\",\n                \"name\": \"_decreasePositionRequestKeysStart\",\n                \"type\": \"uint256\"\n            }\n        ],\n        \"name\": \"setRequestKeysStartValues\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"vault\",\n        \"outputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [],\n        \"name\": \"weth\",\n        \"outputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"\",\n                \"type\": \"address\"\n            }\n        ],\n        \"stateMutability\": \"view\",\n        \"type\": \"function\"\n    },\n    {\n        \"inputs\": [\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_token\",\n                \"type\": \"address\"\n            },\n            {\n                \"internalType\": \"address\",\n                \"name\": \"_receiver\",\n                \"type\": \"address\"\n            }\n        ],\n        \"name\": \"withdrawFees\",\n        \"outputs\": [],\n        \"stateMutability\": \"nonpayable\",\n        \"type\": \"function\"\n    },\n    {\n        \"stateMutability\": \"payable\",\n        \"type\": \"receive\"\n    }\n]") . expect ("invalid abi")
+            ethers :: core :: utils :: __serde_json :: from_str ("[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"collateralDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"name\":\"CancelDecreaseOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"purchaseToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"purchaseTokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"name\":\"CancelIncreaseOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"path\",\"type\":\"address[]\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"minOut\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerRatio\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"shouldUnwrap\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"name\":\"CancelSwapOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"collateralDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"name\":\"CreateDecreaseOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"purchaseToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"purchaseTokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"name\":\"CreateIncreaseOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"path\",\"type\":\"address[]\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"minOut\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerRatio\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"shouldUnwrap\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"name\":\"CreateSwapOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"collateralDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionPrice\",\"type\":\"uint256\"}],\"name\":\"ExecuteDecreaseOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"purchaseToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"purchaseTokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionPrice\",\"type\":\"uint256\"}],\"name\":\"ExecuteIncreaseOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"path\",\"type\":\"address[]\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"minOut\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amountOut\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerRatio\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"shouldUnwrap\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"name\":\"ExecuteSwapOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"router\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"vault\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"weth\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"usdg\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"minExecutionFee\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"minPurchaseTokenAmountUsd\",\"type\":\"uint256\"}],\"name\":\"Initialize\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"collateralDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"}],\"name\":\"UpdateDecreaseOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"gov\",\"type\":\"address\"}],\"name\":\"UpdateGov\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"orderIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"}],\"name\":\"UpdateIncreaseOrder\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"minExecutionFee\",\"type\":\"uint256\"}],\"name\":\"UpdateMinExecutionFee\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"minPurchaseTokenAmountUsd\",\"type\":\"uint256\"}],\"name\":\"UpdateMinPurchaseTokenAmountUsd\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"ordexIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"path\",\"type\":\"address[]\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"minOut\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"triggerRatio\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"shouldUnwrap\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"name\":\"UpdateSwapOrder\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"PRICE_PRECISION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDG_PRECISION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"}],\"name\":\"cancelDecreaseOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"}],\"name\":\"cancelIncreaseOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"_swapOrderIndexes\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_increaseOrderIndexes\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_decreaseOrderIndexes\",\"type\":\"uint256[]\"}],\"name\":\"cancelMultiple\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"}],\"name\":\"cancelSwapOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_indexToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_sizeDelta\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_collateralToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_collateralDelta\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_isLong\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_triggerPrice\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_triggerAboveThreshold\",\"type\":\"bool\"}],\"name\":\"createDecreaseOrder\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_path\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"_amountIn\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_indexToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_minOut\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_sizeDelta\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_collateralToken\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_isLong\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_triggerPrice\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_triggerAboveThreshold\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_executionFee\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_shouldWrap\",\"type\":\"bool\"}],\"name\":\"createIncreaseOrder\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_path\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"_amountIn\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_minOut\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_triggerRatio\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_triggerAboveThreshold\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_executionFee\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_shouldWrap\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"_shouldUnwrap\",\"type\":\"bool\"}],\"name\":\"createSwapOrder\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"decreaseOrders\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"collateralDelta\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"decreaseOrdersIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"_feeReceiver\",\"type\":\"address\"}],\"name\":\"executeDecreaseOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"_feeReceiver\",\"type\":\"address\"}],\"name\":\"executeIncreaseOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"_feeReceiver\",\"type\":\"address\"}],\"name\":\"executeSwapOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"}],\"name\":\"getDecreaseOrder\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"collateralDelta\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"}],\"name\":\"getIncreaseOrder\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"purchaseToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"purchaseTokenAmount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"}],\"name\":\"getSwapOrder\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"path0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"path1\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"path2\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minOut\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"triggerRatio\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"shouldUnwrap\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_otherToken\",\"type\":\"address\"}],\"name\":\"getUsdgMinPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"gov\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"increaseOrders\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"purchaseToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"purchaseTokenAmount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"collateralToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"indexToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"sizeDelta\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isLong\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"triggerPrice\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"increaseOrdersIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_router\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_vault\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_weth\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_usdg\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_minExecutionFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_minPurchaseTokenAmountUsd\",\"type\":\"uint256\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isInitialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"minExecutionFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"minPurchaseTokenAmountUsd\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"router\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_gov\",\"type\":\"address\"}],\"name\":\"setGov\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_minExecutionFee\",\"type\":\"uint256\"}],\"name\":\"setMinExecutionFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_minPurchaseTokenAmountUsd\",\"type\":\"uint256\"}],\"name\":\"setMinPurchaseTokenAmountUsd\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"swapOrders\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minOut\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"triggerRatio\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"triggerAboveThreshold\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"shouldUnwrap\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"executionFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"swapOrdersIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_collateralDelta\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_sizeDelta\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_triggerPrice\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_triggerAboveThreshold\",\"type\":\"bool\"}],\"name\":\"updateDecreaseOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_sizeDelta\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_triggerPrice\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_triggerAboveThreshold\",\"type\":\"bool\"}],\"name\":\"updateIncreaseOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_orderIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_minOut\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_triggerRatio\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_triggerAboveThreshold\",\"type\":\"bool\"}],\"name\":\"updateSwapOrder\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"usdg\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_triggerAboveThreshold\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_triggerPrice\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_indexToken\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_maximizePrice\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"_raise\",\"type\":\"bool\"}],\"name\":\"validatePositionOrderPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_path\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"_triggerRatio\",\"type\":\"uint256\"}],\"name\":\"validateSwapOrderPriceWithTriggerAboveThreshold\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vault\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"weth\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]") . expect ("invalid abi")
         });
     pub struct b_contract<M>(ethers::contract::Contract<M>);
     impl<M> Clone for b_contract<M> {
@@ -49,299 +49,295 @@ pub mod b_contract {
         ) -> Self {
             ethers::contract::Contract::new(address.into(), B_CONTRACT_ABI.clone(), client).into()
         }
-        #[doc = "Calls the contract's `BASIS_POINTS_DIVISOR` (0x126082cf) function"]
-        pub fn basis_points_divisor(
+        #[doc = "Calls the contract's `PRICE_PRECISION` (0x95082d25) function"]
+        pub fn price_precision(
             &self,
         ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
             self.0
-                .method_hash([18, 96, 130, 207], ())
+                .method_hash([149, 8, 45, 37], ())
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `admin` (0xf851a440) function"]
-        pub fn admin(
+        #[doc = "Calls the contract's `USDG_PRECISION` (0x4a686d67) function"]
+        pub fn usdg_precision(
             &self,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::Address> {
+        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
             self.0
-                .method_hash([248, 81, 164, 64], ())
+                .method_hash([74, 104, 109, 103], ())
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `approve` (0xe1f21c67) function"]
-        pub fn approve(
+        #[doc = "Calls the contract's `cancelDecreaseOrder` (0x9e71b0f0) function"]
+        pub fn cancel_decrease_order(
             &self,
-            token: ethers::core::types::Address,
-            spender: ethers::core::types::Address,
-            amount: ethers::core::types::U256,
+            order_index: ethers::core::types::U256,
         ) -> ethers::contract::builders::ContractCall<M, ()> {
             self.0
-                .method_hash([225, 242, 28, 103], (token, spender, amount))
+                .method_hash([158, 113, 176, 240], order_index)
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `cancelDecreasePosition` (0x60a362e2) function"]
-        pub fn cancel_decrease_position(
+        #[doc = "Calls the contract's `cancelIncreaseOrder` (0x47e0bbd0) function"]
+        pub fn cancel_increase_order(
             &self,
-            key: [u8; 32],
-            execution_fee_receiver: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, bool> {
+            order_index: ethers::core::types::U256,
+        ) -> ethers::contract::builders::ContractCall<M, ()> {
             self.0
-                .method_hash([96, 163, 98, 226], (key, execution_fee_receiver))
+                .method_hash([71, 224, 187, 208], order_index)
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `cancelIncreasePosition` (0x225fc9fd) function"]
-        pub fn cancel_increase_position(
+        #[doc = "Calls the contract's `cancelMultiple` (0x807c5600) function"]
+        pub fn cancel_multiple(
             &self,
-            key: [u8; 32],
-            execution_fee_receiver: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, bool> {
-            self.0
-                .method_hash([34, 95, 201, 253], (key, execution_fee_receiver))
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `createDecreasePosition` (0xe70dd2fc) function"]
-        pub fn create_decrease_position(
-            &self,
-            path: ::std::vec::Vec<ethers::core::types::Address>,
-            index_token: ethers::core::types::Address,
-            collateral_delta: ethers::core::types::U256,
-            size_delta: ethers::core::types::U256,
-            is_long: bool,
-            receiver: ethers::core::types::Address,
-            acceptable_price: ethers::core::types::U256,
-            min_out: ethers::core::types::U256,
-            execution_fee: ethers::core::types::U256,
-            withdraw_eth: bool,
+            swap_order_indexes: ::std::vec::Vec<ethers::core::types::U256>,
+            increase_order_indexes: ::std::vec::Vec<ethers::core::types::U256>,
+            decrease_order_indexes: ::std::vec::Vec<ethers::core::types::U256>,
         ) -> ethers::contract::builders::ContractCall<M, ()> {
             self.0
                 .method_hash(
-                    [231, 13, 210, 252],
+                    [128, 124, 86, 0],
                     (
-                        path,
-                        index_token,
-                        collateral_delta,
-                        size_delta,
-                        is_long,
-                        receiver,
-                        acceptable_price,
-                        min_out,
-                        execution_fee,
-                        withdraw_eth,
+                        swap_order_indexes,
+                        increase_order_indexes,
+                        decrease_order_indexes,
                     ),
                 )
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `createIncreasePosition` (0xc9874170) function"]
-        pub fn create_increase_position(
+        #[doc = "Calls the contract's `cancelSwapOrder` (0xf882ac07) function"]
+        pub fn cancel_swap_order(
+            &self,
+            order_index: ethers::core::types::U256,
+        ) -> ethers::contract::builders::ContractCall<M, ()> {
+            self.0
+                .method_hash([248, 130, 172, 7], order_index)
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `createDecreaseOrder` (0xc16cde8a) function"]
+        pub fn create_decrease_order(
+            &self,
+            index_token: ethers::core::types::Address,
+            size_delta: ethers::core::types::U256,
+            collateral_token: ethers::core::types::Address,
+            collateral_delta: ethers::core::types::U256,
+            is_long: bool,
+            trigger_price: ethers::core::types::U256,
+            trigger_above_threshold: bool,
+        ) -> ethers::contract::builders::ContractCall<M, ()> {
+            self.0
+                .method_hash(
+                    [193, 108, 222, 138],
+                    (
+                        index_token,
+                        size_delta,
+                        collateral_token,
+                        collateral_delta,
+                        is_long,
+                        trigger_price,
+                        trigger_above_threshold,
+                    ),
+                )
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `createIncreaseOrder` (0xb142a4b0) function"]
+        pub fn create_increase_order(
             &self,
             path: ::std::vec::Vec<ethers::core::types::Address>,
+            amount_in: ethers::core::types::U256,
             index_token: ethers::core::types::Address,
+            min_out: ethers::core::types::U256,
+            size_delta: ethers::core::types::U256,
+            collateral_token: ethers::core::types::Address,
+            is_long: bool,
+            trigger_price: ethers::core::types::U256,
+            trigger_above_threshold: bool,
+            execution_fee: ethers::core::types::U256,
+            should_wrap: bool,
+        ) -> ethers::contract::builders::ContractCall<M, ()> {
+            self.0
+                .method_hash(
+                    [177, 66, 164, 176],
+                    (
+                        path,
+                        amount_in,
+                        index_token,
+                        min_out,
+                        size_delta,
+                        collateral_token,
+                        is_long,
+                        trigger_price,
+                        trigger_above_threshold,
+                        execution_fee,
+                        should_wrap,
+                    ),
+                )
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `createSwapOrder` (0x269ae6c2) function"]
+        pub fn create_swap_order(
+            &self,
+            path: ::std::vec::Vec<ethers::core::types::Address>,
             amount_in: ethers::core::types::U256,
             min_out: ethers::core::types::U256,
-            size_delta: ethers::core::types::U256,
-            is_long: bool,
-            acceptable_price: ethers::core::types::U256,
+            trigger_ratio: ethers::core::types::U256,
+            trigger_above_threshold: bool,
             execution_fee: ethers::core::types::U256,
-            referral_code: [u8; 32],
+            should_wrap: bool,
+            should_unwrap: bool,
         ) -> ethers::contract::builders::ContractCall<M, ()> {
             self.0
                 .method_hash(
-                    [201, 135, 65, 112],
+                    [38, 154, 230, 194],
                     (
                         path,
-                        index_token,
                         amount_in,
                         min_out,
-                        size_delta,
-                        is_long,
-                        acceptable_price,
+                        trigger_ratio,
+                        trigger_above_threshold,
                         execution_fee,
-                        referral_code,
+                        should_wrap,
+                        should_unwrap,
                     ),
                 )
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `createIncreasePositionETH` (0x332e0382) function"]
-        pub fn create_increase_position_eth(
+        #[doc = "Calls the contract's `decreaseOrders` (0xf2d2e01b) function"]
+        pub fn decrease_orders(
             &self,
-            path: ::std::vec::Vec<ethers::core::types::Address>,
-            index_token: ethers::core::types::Address,
-            min_out: ethers::core::types::U256,
-            size_delta: ethers::core::types::U256,
-            is_long: bool,
-            acceptable_price: ethers::core::types::U256,
-            execution_fee: ethers::core::types::U256,
-            referral_code: [u8; 32],
-        ) -> ethers::contract::builders::ContractCall<M, ()> {
-            self.0
-                .method_hash(
-                    [51, 46, 3, 130],
-                    (
-                        path,
-                        index_token,
-                        min_out,
-                        size_delta,
-                        is_long,
-                        acceptable_price,
-                        execution_fee,
-                        referral_code,
-                    ),
-                )
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `decreasePositionRequestKeys` (0x4278555f) function"]
-        pub fn decrease_position_request_keys(
-            &self,
-            p0: ethers::core::types::U256,
-        ) -> ethers::contract::builders::ContractCall<M, [u8; 32]> {
-            self.0
-                .method_hash([66, 120, 85, 95], p0)
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `decreasePositionRequestKeysStart` (0x1bca8cf0) function"]
-        pub fn decrease_position_request_keys_start(
-            &self,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
-            self.0
-                .method_hash([27, 202, 140, 240], ())
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `decreasePositionRequests` (0x1f285106) function"]
-        pub fn decrease_position_requests(
-            &self,
-            p0: [u8; 32],
+            p0: ethers::core::types::Address,
+            p1: ethers::core::types::U256,
         ) -> ethers::contract::builders::ContractCall<
             M,
             (
                 ethers::core::types::Address,
                 ethers::core::types::Address,
                 ethers::core::types::U256,
-                ethers::core::types::U256,
-                bool,
                 ethers::core::types::Address,
                 ethers::core::types::U256,
-                ethers::core::types::U256,
-                ethers::core::types::U256,
-                ethers::core::types::U256,
+                bool,
                 ethers::core::types::U256,
                 bool,
+                ethers::core::types::U256,
             ),
         > {
             self.0
-                .method_hash([31, 40, 81, 6], p0)
+                .method_hash([242, 210, 224, 27], (p0, p1))
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `decreasePositionsIndex` (0xfa444577) function"]
-        pub fn decrease_positions_index(
+        #[doc = "Calls the contract's `decreaseOrdersIndex` (0xd566d0ca) function"]
+        pub fn decrease_orders_index(
             &self,
             p0: ethers::core::types::Address,
         ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
             self.0
-                .method_hash([250, 68, 69, 119], p0)
+                .method_hash([213, 102, 208, 202], p0)
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `depositFee` (0x67a52793) function"]
-        pub fn deposit_fee(
+        #[doc = "Calls the contract's `executeDecreaseOrder` (0x11d9444a) function"]
+        pub fn execute_decrease_order(
             &self,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
-            self.0
-                .method_hash([103, 165, 39, 147], ())
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `executeDecreasePosition` (0x0d4d003d) function"]
-        pub fn execute_decrease_position(
-            &self,
-            key: [u8; 32],
-            execution_fee_receiver: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, bool> {
-            self.0
-                .method_hash([13, 77, 0, 61], (key, execution_fee_receiver))
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `executeDecreasePositions` (0xf3883d8b) function"]
-        pub fn execute_decrease_positions(
-            &self,
-            end_index: ethers::core::types::U256,
-            execution_fee_receiver: ethers::core::types::Address,
+            address: ethers::core::types::Address,
+            order_index: ethers::core::types::U256,
+            fee_receiver: ethers::core::types::Address,
         ) -> ethers::contract::builders::ContractCall<M, ()> {
             self.0
-                .method_hash([243, 136, 61, 139], (end_index, execution_fee_receiver))
+                .method_hash([17, 217, 68, 74], (address, order_index, fee_receiver))
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `executeIncreasePosition` (0x27b42c0f) function"]
-        pub fn execute_increase_position(
+        #[doc = "Calls the contract's `executeIncreaseOrder` (0xd38ab519) function"]
+        pub fn execute_increase_order(
             &self,
-            key: [u8; 32],
-            execution_fee_receiver: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, bool> {
-            self.0
-                .method_hash([39, 180, 44, 15], (key, execution_fee_receiver))
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `executeIncreasePositions` (0x9a208100) function"]
-        pub fn execute_increase_positions(
-            &self,
-            end_index: ethers::core::types::U256,
-            execution_fee_receiver: ethers::core::types::Address,
+            address: ethers::core::types::Address,
+            order_index: ethers::core::types::U256,
+            fee_receiver: ethers::core::types::Address,
         ) -> ethers::contract::builders::ContractCall<M, ()> {
             self.0
-                .method_hash([154, 32, 129, 0], (end_index, execution_fee_receiver))
+                .method_hash([211, 138, 181, 25], (address, order_index, fee_receiver))
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `feeReserves` (0x1ce9cb8f) function"]
-        pub fn fee_reserves(
-            &self,
-            p0: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
-            self.0
-                .method_hash([28, 233, 203, 143], p0)
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `getDecreasePositionRequestPath` (0x5d5c22e8) function"]
-        pub fn get_decrease_position_request_path(
-            &self,
-            key: [u8; 32],
-        ) -> ethers::contract::builders::ContractCall<
-            M,
-            ::std::vec::Vec<ethers::core::types::Address>,
-        > {
-            self.0
-                .method_hash([93, 92, 34, 232], key)
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `getIncreasePositionRequestPath` (0x95e9bbd7) function"]
-        pub fn get_increase_position_request_path(
-            &self,
-            key: [u8; 32],
-        ) -> ethers::contract::builders::ContractCall<
-            M,
-            ::std::vec::Vec<ethers::core::types::Address>,
-        > {
-            self.0
-                .method_hash([149, 233, 187, 215], key)
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `getRequestKey` (0x62f8a3fe) function"]
-        pub fn get_request_key(
+        #[doc = "Calls the contract's `executeSwapOrder` (0x07c7edc3) function"]
+        pub fn execute_swap_order(
             &self,
             account: ethers::core::types::Address,
-            index: ethers::core::types::U256,
-        ) -> ethers::contract::builders::ContractCall<M, [u8; 32]> {
+            order_index: ethers::core::types::U256,
+            fee_receiver: ethers::core::types::Address,
+        ) -> ethers::contract::builders::ContractCall<M, ()> {
             self.0
-                .method_hash([98, 248, 163, 254], (account, index))
+                .method_hash([7, 199, 237, 195], (account, order_index, fee_receiver))
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `getRequestQueueLengths` (0xf2cea6a5) function"]
-        pub fn get_request_queue_lengths(
+        #[doc = "Calls the contract's `getDecreaseOrder` (0x026032ee) function"]
+        pub fn get_decrease_order(
             &self,
+            account: ethers::core::types::Address,
+            order_index: ethers::core::types::U256,
         ) -> ethers::contract::builders::ContractCall<
             M,
             (
+                ethers::core::types::Address,
                 ethers::core::types::U256,
+                ethers::core::types::Address,
                 ethers::core::types::U256,
+                bool,
                 ethers::core::types::U256,
+                bool,
                 ethers::core::types::U256,
             ),
         > {
             self.0
-                .method_hash([242, 206, 166, 165], ())
+                .method_hash([2, 96, 50, 238], (account, order_index))
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `getIncreaseOrder` (0xd3bab1d1) function"]
+        pub fn get_increase_order(
+            &self,
+            account: ethers::core::types::Address,
+            order_index: ethers::core::types::U256,
+        ) -> ethers::contract::builders::ContractCall<
+            M,
+            (
+                ethers::core::types::Address,
+                ethers::core::types::U256,
+                ethers::core::types::Address,
+                ethers::core::types::Address,
+                ethers::core::types::U256,
+                bool,
+                ethers::core::types::U256,
+                bool,
+                ethers::core::types::U256,
+            ),
+        > {
+            self.0
+                .method_hash([211, 186, 177, 209], (account, order_index))
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `getSwapOrder` (0xd0d40cd6) function"]
+        pub fn get_swap_order(
+            &self,
+            account: ethers::core::types::Address,
+            order_index: ethers::core::types::U256,
+        ) -> ethers::contract::builders::ContractCall<
+            M,
+            (
+                ethers::core::types::Address,
+                ethers::core::types::Address,
+                ethers::core::types::Address,
+                ethers::core::types::U256,
+                ethers::core::types::U256,
+                ethers::core::types::U256,
+                bool,
+                bool,
+                ethers::core::types::U256,
+            ),
+        > {
+            self.0
+                .method_hash([208, 212, 12, 214], (account, order_index))
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `getUsdgMinPrice` (0x9e23de5c) function"]
+        pub fn get_usdg_min_price(
+            &self,
+            other_token: ethers::core::types::Address,
+        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
+            self.0
+                .method_hash([158, 35, 222, 92], other_token)
                 .expect("method not found (this should never happen)")
         }
         #[doc = "Calls the contract's `gov` (0x12d43a51) function"]
@@ -352,111 +348,67 @@ pub mod b_contract {
                 .method_hash([18, 212, 58, 81], ())
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `increasePositionBufferBps` (0x98d1e03a) function"]
-        pub fn increase_position_buffer_bps(
+        #[doc = "Calls the contract's `increaseOrders` (0x2b7d6290) function"]
+        pub fn increase_orders(
             &self,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
-            self.0
-                .method_hash([152, 209, 224, 58], ())
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `increasePositionRequestKeys` (0x04225954) function"]
-        pub fn increase_position_request_keys(
-            &self,
-            p0: ethers::core::types::U256,
-        ) -> ethers::contract::builders::ContractCall<M, [u8; 32]> {
-            self.0
-                .method_hash([4, 34, 89, 84], p0)
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `increasePositionRequestKeysStart` (0x9b578620) function"]
-        pub fn increase_position_request_keys_start(
-            &self,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
-            self.0
-                .method_hash([155, 87, 134, 32], ())
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `increasePositionRequests` (0xfaf990f3) function"]
-        pub fn increase_position_requests(
-            &self,
-            p0: [u8; 32],
+            p0: ethers::core::types::Address,
+            p1: ethers::core::types::U256,
         ) -> ethers::contract::builders::ContractCall<
             M,
             (
                 ethers::core::types::Address,
                 ethers::core::types::Address,
                 ethers::core::types::U256,
+                ethers::core::types::Address,
+                ethers::core::types::Address,
                 ethers::core::types::U256,
+                bool,
                 ethers::core::types::U256,
                 bool,
                 ethers::core::types::U256,
-                ethers::core::types::U256,
-                ethers::core::types::U256,
-                ethers::core::types::U256,
-                bool,
             ),
         > {
             self.0
-                .method_hash([250, 249, 144, 243], p0)
+                .method_hash([43, 125, 98, 144], (p0, p1))
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `increasePositionsIndex` (0x633451de) function"]
-        pub fn increase_positions_index(
+        #[doc = "Calls the contract's `increaseOrdersIndex` (0xaec22455) function"]
+        pub fn increase_orders_index(
             &self,
             p0: ethers::core::types::Address,
         ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
             self.0
-                .method_hash([99, 52, 81, 222], p0)
+                .method_hash([174, 194, 36, 85], p0)
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `isLeverageEnabled` (0x3e72a262) function"]
-        pub fn is_leverage_enabled(&self) -> ethers::contract::builders::ContractCall<M, bool> {
-            self.0
-                .method_hash([62, 114, 162, 98], ())
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `isPositionKeeper` (0x36eba48a) function"]
-        pub fn is_position_keeper(
+        #[doc = "Calls the contract's `initialize` (0xd7c41c79) function"]
+        pub fn initialize(
             &self,
-            p0: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, bool> {
+            router: ethers::core::types::Address,
+            vault: ethers::core::types::Address,
+            weth: ethers::core::types::Address,
+            usdg: ethers::core::types::Address,
+            min_execution_fee: ethers::core::types::U256,
+            min_purchase_token_amount_usd: ethers::core::types::U256,
+        ) -> ethers::contract::builders::ContractCall<M, ()> {
             self.0
-                .method_hash([54, 235, 164, 138], p0)
+                .method_hash(
+                    [215, 196, 28, 121],
+                    (
+                        router,
+                        vault,
+                        weth,
+                        usdg,
+                        min_execution_fee,
+                        min_purchase_token_amount_usd,
+                    ),
+                )
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `maxGlobalLongSizes` (0x1045c74e) function"]
-        pub fn max_global_long_sizes(
-            &self,
-            p0: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
+        #[doc = "Calls the contract's `isInitialized` (0x392e53cd) function"]
+        pub fn is_initialized(&self) -> ethers::contract::builders::ContractCall<M, bool> {
             self.0
-                .method_hash([16, 69, 199, 78], p0)
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `maxGlobalShortSizes` (0x9698d25a) function"]
-        pub fn max_global_short_sizes(
-            &self,
-            p0: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
-            self.0
-                .method_hash([150, 152, 210, 90], p0)
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `maxTimeDelay` (0xcb0269c9) function"]
-        pub fn max_time_delay(
-            &self,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
-            self.0
-                .method_hash([203, 2, 105, 201], ())
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `minBlockDelayKeeper` (0x5841fcaa) function"]
-        pub fn min_block_delay_keeper(
-            &self,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
-            self.0
-                .method_hash([88, 65, 252, 170], ())
+                .method_hash([57, 46, 83, 205], ())
                 .expect("method not found (this should never happen)")
         }
         #[doc = "Calls the contract's `minExecutionFee` (0x63ae2103) function"]
@@ -467,20 +419,12 @@ pub mod b_contract {
                 .method_hash([99, 174, 33, 3], ())
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `minTimeDelayPublic` (0x3a2a80c7) function"]
-        pub fn min_time_delay_public(
+        #[doc = "Calls the contract's `minPurchaseTokenAmountUsd` (0x8de10c2e) function"]
+        pub fn min_purchase_token_amount_usd(
             &self,
         ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
             self.0
-                .method_hash([58, 42, 128, 199], ())
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `referralStorage` (0x006cc35e) function"]
-        pub fn referral_storage(
-            &self,
-        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::Address> {
-            self.0
-                .method_hash([0, 108, 195, 94], ())
+                .method_hash([141, 225, 12, 46], ())
                 .expect("method not found (this should never happen)")
         }
         #[doc = "Calls the contract's `router` (0xf887ea40) function"]
@@ -489,52 +433,6 @@ pub mod b_contract {
         ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::Address> {
             self.0
                 .method_hash([248, 135, 234, 64], ())
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `sendValue` (0x24a084df) function"]
-        pub fn send_value(
-            &self,
-            receiver: ethers::core::types::Address,
-            amount: ethers::core::types::U256,
-        ) -> ethers::contract::builders::ContractCall<M, ()> {
-            self.0
-                .method_hash([36, 160, 132, 223], (receiver, amount))
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `setAdmin` (0x704b6c02) function"]
-        pub fn set_admin(
-            &self,
-            admin: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, ()> {
-            self.0
-                .method_hash([112, 75, 108, 2], admin)
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `setDelayValues` (0x4067b132) function"]
-        pub fn set_delay_values(
-            &self,
-            min_block_delay_keeper: ethers::core::types::U256,
-            min_time_delay_public: ethers::core::types::U256,
-            max_time_delay: ethers::core::types::U256,
-        ) -> ethers::contract::builders::ContractCall<M, ()> {
-            self.0
-                .method_hash(
-                    [64, 103, 177, 50],
-                    (
-                        min_block_delay_keeper,
-                        min_time_delay_public,
-                        max_time_delay,
-                    ),
-                )
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `setDepositFee` (0x490ae210) function"]
-        pub fn set_deposit_fee(
-            &self,
-            deposit_fee: ethers::core::types::U256,
-        ) -> ethers::contract::builders::ContractCall<M, ()> {
-            self.0
-                .method_hash([73, 10, 226, 16], deposit_fee)
                 .expect("method not found (this should never happen)")
         }
         #[doc = "Calls the contract's `setGov` (0xcfad57a2) function"]
@@ -546,35 +444,6 @@ pub mod b_contract {
                 .method_hash([207, 173, 87, 162], gov)
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `setIncreasePositionBufferBps` (0x233bfe3b) function"]
-        pub fn set_increase_position_buffer_bps(
-            &self,
-            increase_position_buffer_bps: ethers::core::types::U256,
-        ) -> ethers::contract::builders::ContractCall<M, ()> {
-            self.0
-                .method_hash([35, 59, 254, 59], increase_position_buffer_bps)
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `setIsLeverageEnabled` (0x7c2eb9f7) function"]
-        pub fn set_is_leverage_enabled(
-            &self,
-            is_leverage_enabled: bool,
-        ) -> ethers::contract::builders::ContractCall<M, ()> {
-            self.0
-                .method_hash([124, 46, 185, 247], is_leverage_enabled)
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Calls the contract's `setMaxGlobalSizes` (0xef12c67e) function"]
-        pub fn set_max_global_sizes(
-            &self,
-            tokens: ::std::vec::Vec<ethers::core::types::Address>,
-            long_sizes: ::std::vec::Vec<ethers::core::types::U256>,
-            short_sizes: ::std::vec::Vec<ethers::core::types::U256>,
-        ) -> ethers::contract::builders::ContractCall<M, ()> {
-            self.0
-                .method_hash([239, 18, 198, 126], (tokens, long_sizes, short_sizes))
-                .expect("method not found (this should never happen)")
-        }
         #[doc = "Calls the contract's `setMinExecutionFee` (0xfc2cee62) function"]
         pub fn set_min_execution_fee(
             &self,
@@ -584,39 +453,141 @@ pub mod b_contract {
                 .method_hash([252, 44, 238, 98], min_execution_fee)
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `setPositionKeeper` (0x3422ead1) function"]
-        pub fn set_position_keeper(
+        #[doc = "Calls the contract's `setMinPurchaseTokenAmountUsd` (0x0d5cc938) function"]
+        pub fn set_min_purchase_token_amount_usd(
             &self,
-            account: ethers::core::types::Address,
-            is_active: bool,
+            min_purchase_token_amount_usd: ethers::core::types::U256,
         ) -> ethers::contract::builders::ContractCall<M, ()> {
             self.0
-                .method_hash([52, 34, 234, 209], (account, is_active))
+                .method_hash([13, 92, 201, 56], min_purchase_token_amount_usd)
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `setReferralStorage` (0xae4d7f9a) function"]
-        pub fn set_referral_storage(
+        #[doc = "Calls the contract's `swapOrders` (0x79221fa2) function"]
+        pub fn swap_orders(
             &self,
-            referral_storage: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, ()> {
+            p0: ethers::core::types::Address,
+            p1: ethers::core::types::U256,
+        ) -> ethers::contract::builders::ContractCall<
+            M,
+            (
+                ethers::core::types::Address,
+                ethers::core::types::U256,
+                ethers::core::types::U256,
+                ethers::core::types::U256,
+                bool,
+                bool,
+                ethers::core::types::U256,
+            ),
+        > {
             self.0
-                .method_hash([174, 77, 127, 154], referral_storage)
+                .method_hash([121, 34, 31, 162], (p0, p1))
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `setRequestKeysStartValues` (0x308aa81f) function"]
-        pub fn set_request_keys_start_values(
+        #[doc = "Calls the contract's `swapOrdersIndex` (0x00cf066b) function"]
+        pub fn swap_orders_index(
             &self,
-            increase_position_request_keys_start: ethers::core::types::U256,
-            decrease_position_request_keys_start: ethers::core::types::U256,
+            p0: ethers::core::types::Address,
+        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::U256> {
+            self.0
+                .method_hash([0, 207, 6, 107], p0)
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `updateDecreaseOrder` (0xa397ea54) function"]
+        pub fn update_decrease_order(
+            &self,
+            order_index: ethers::core::types::U256,
+            collateral_delta: ethers::core::types::U256,
+            size_delta: ethers::core::types::U256,
+            trigger_price: ethers::core::types::U256,
+            trigger_above_threshold: bool,
         ) -> ethers::contract::builders::ContractCall<M, ()> {
             self.0
                 .method_hash(
-                    [48, 138, 168, 31],
+                    [163, 151, 234, 84],
                     (
-                        increase_position_request_keys_start,
-                        decrease_position_request_keys_start,
+                        order_index,
+                        collateral_delta,
+                        size_delta,
+                        trigger_price,
+                        trigger_above_threshold,
                     ),
                 )
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `updateIncreaseOrder` (0x9983ee1b) function"]
+        pub fn update_increase_order(
+            &self,
+            order_index: ethers::core::types::U256,
+            size_delta: ethers::core::types::U256,
+            trigger_price: ethers::core::types::U256,
+            trigger_above_threshold: bool,
+        ) -> ethers::contract::builders::ContractCall<M, ()> {
+            self.0
+                .method_hash(
+                    [153, 131, 238, 27],
+                    (
+                        order_index,
+                        size_delta,
+                        trigger_price,
+                        trigger_above_threshold,
+                    ),
+                )
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `updateSwapOrder` (0xc86b0f7d) function"]
+        pub fn update_swap_order(
+            &self,
+            order_index: ethers::core::types::U256,
+            min_out: ethers::core::types::U256,
+            trigger_ratio: ethers::core::types::U256,
+            trigger_above_threshold: bool,
+        ) -> ethers::contract::builders::ContractCall<M, ()> {
+            self.0
+                .method_hash(
+                    [200, 107, 15, 125],
+                    (order_index, min_out, trigger_ratio, trigger_above_threshold),
+                )
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `usdg` (0xf5b91b7b) function"]
+        pub fn usdg(
+            &self,
+        ) -> ethers::contract::builders::ContractCall<M, ethers::core::types::Address> {
+            self.0
+                .method_hash([245, 185, 27, 123], ())
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `validatePositionOrderPrice` (0x4c54f0b0) function"]
+        pub fn validate_position_order_price(
+            &self,
+            trigger_above_threshold: bool,
+            trigger_price: ethers::core::types::U256,
+            index_token: ethers::core::types::Address,
+            maximize_price: bool,
+            raise: bool,
+        ) -> ethers::contract::builders::ContractCall<M, (ethers::core::types::U256, bool)>
+        {
+            self.0
+                .method_hash(
+                    [76, 84, 240, 176],
+                    (
+                        trigger_above_threshold,
+                        trigger_price,
+                        index_token,
+                        maximize_price,
+                        raise,
+                    ),
+                )
+                .expect("method not found (this should never happen)")
+        }
+        #[doc = "Calls the contract's `validateSwapOrderPriceWithTriggerAboveThreshold` (0xc4a1821b) function"]
+        pub fn validate_swap_order_price_with_trigger_above_threshold(
+            &self,
+            path: ::std::vec::Vec<ethers::core::types::Address>,
+            trigger_ratio: ethers::core::types::U256,
+        ) -> ethers::contract::builders::ContractCall<M, bool> {
+            self.0
+                .method_hash([196, 161, 130, 27], (path, trigger_ratio))
                 .expect("method not found (this should never happen)")
         }
         #[doc = "Calls the contract's `vault` (0xfbfa77cf) function"]
@@ -635,126 +606,96 @@ pub mod b_contract {
                 .method_hash([63, 200, 206, 243], ())
                 .expect("method not found (this should never happen)")
         }
-        #[doc = "Calls the contract's `withdrawFees` (0xf2555278) function"]
-        pub fn withdraw_fees(
+        #[doc = "Gets the contract's `CancelDecreaseOrder` event"]
+        pub fn cancel_decrease_order_filter(
             &self,
-            token: ethers::core::types::Address,
-            receiver: ethers::core::types::Address,
-        ) -> ethers::contract::builders::ContractCall<M, ()> {
-            self.0
-                .method_hash([242, 85, 82, 120], (token, receiver))
-                .expect("method not found (this should never happen)")
-        }
-        #[doc = "Gets the contract's `CancelDecreasePosition` event"]
-        pub fn cancel_decrease_position_filter(
-            &self,
-        ) -> ethers::contract::builders::Event<M, CancelDecreasePositionFilter> {
+        ) -> ethers::contract::builders::Event<M, CancelDecreaseOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `CancelIncreasePosition` event"]
-        pub fn cancel_increase_position_filter(
+        #[doc = "Gets the contract's `CancelIncreaseOrder` event"]
+        pub fn cancel_increase_order_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, CancelIncreasePositionFilter> {
+        ) -> ethers::contract::builders::Event<M, CancelIncreaseOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `CreateDecreasePosition` event"]
-        pub fn create_decrease_position_filter(
+        #[doc = "Gets the contract's `CancelSwapOrder` event"]
+        pub fn cancel_swap_order_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, CreateDecreasePositionFilter> {
+        ) -> ethers::contract::builders::Event<M, CancelSwapOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `CreateIncreasePosition` event"]
-        pub fn create_increase_position_filter(
+        #[doc = "Gets the contract's `CreateDecreaseOrder` event"]
+        pub fn create_decrease_order_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, CreateIncreasePositionFilter> {
+        ) -> ethers::contract::builders::Event<M, CreateDecreaseOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `DecreasePositionReferral` event"]
-        pub fn decrease_position_referral_filter(
+        #[doc = "Gets the contract's `CreateIncreaseOrder` event"]
+        pub fn create_increase_order_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, DecreasePositionReferralFilter> {
+        ) -> ethers::contract::builders::Event<M, CreateIncreaseOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `ExecuteDecreasePosition` event"]
-        pub fn execute_decrease_position_filter(
+        #[doc = "Gets the contract's `CreateSwapOrder` event"]
+        pub fn create_swap_order_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, ExecuteDecreasePositionFilter> {
+        ) -> ethers::contract::builders::Event<M, CreateSwapOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `ExecuteIncreasePosition` event"]
-        pub fn execute_increase_position_filter(
+        #[doc = "Gets the contract's `ExecuteDecreaseOrder` event"]
+        pub fn execute_decrease_order_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, ExecuteIncreasePositionFilter> {
+        ) -> ethers::contract::builders::Event<M, ExecuteDecreaseOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `IncreasePositionReferral` event"]
-        pub fn increase_position_referral_filter(
+        #[doc = "Gets the contract's `ExecuteIncreaseOrder` event"]
+        pub fn execute_increase_order_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, IncreasePositionReferralFilter> {
+        ) -> ethers::contract::builders::Event<M, ExecuteIncreaseOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `SetAdmin` event"]
-        pub fn set_admin_filter(&self) -> ethers::contract::builders::Event<M, SetAdminFilter> {
+        #[doc = "Gets the contract's `ExecuteSwapOrder` event"]
+        pub fn execute_swap_order_filter(
+            &self,
+        ) -> ethers::contract::builders::Event<M, ExecuteSwapOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `SetDelayValues` event"]
-        pub fn set_delay_values_filter(
-            &self,
-        ) -> ethers::contract::builders::Event<M, SetDelayValuesFilter> {
+        #[doc = "Gets the contract's `Initialize` event"]
+        pub fn initialize_filter(&self) -> ethers::contract::builders::Event<M, InitializeFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `SetDepositFee` event"]
-        pub fn set_deposit_fee_filter(
+        #[doc = "Gets the contract's `UpdateDecreaseOrder` event"]
+        pub fn update_decrease_order_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, SetDepositFeeFilter> {
+        ) -> ethers::contract::builders::Event<M, UpdateDecreaseOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `SetIncreasePositionBufferBps` event"]
-        pub fn set_increase_position_buffer_bps_filter(
-            &self,
-        ) -> ethers::contract::builders::Event<M, SetIncreasePositionBufferBpsFilter> {
+        #[doc = "Gets the contract's `UpdateGov` event"]
+        pub fn update_gov_filter(&self) -> ethers::contract::builders::Event<M, UpdateGovFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `SetIsLeverageEnabled` event"]
-        pub fn set_is_leverage_enabled_filter(
+        #[doc = "Gets the contract's `UpdateIncreaseOrder` event"]
+        pub fn update_increase_order_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, SetIsLeverageEnabledFilter> {
+        ) -> ethers::contract::builders::Event<M, UpdateIncreaseOrderFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `SetMaxGlobalSizes` event"]
-        pub fn set_max_global_sizes_filter(
+        #[doc = "Gets the contract's `UpdateMinExecutionFee` event"]
+        pub fn update_min_execution_fee_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, SetMaxGlobalSizesFilter> {
+        ) -> ethers::contract::builders::Event<M, UpdateMinExecutionFeeFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `SetMinExecutionFee` event"]
-        pub fn set_min_execution_fee_filter(
+        #[doc = "Gets the contract's `UpdateMinPurchaseTokenAmountUsd` event"]
+        pub fn update_min_purchase_token_amount_usd_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, SetMinExecutionFeeFilter> {
+        ) -> ethers::contract::builders::Event<M, UpdateMinPurchaseTokenAmountUsdFilter> {
             self.0.event()
         }
-        #[doc = "Gets the contract's `SetPositionKeeper` event"]
-        pub fn set_position_keeper_filter(
+        #[doc = "Gets the contract's `UpdateSwapOrder` event"]
+        pub fn update_swap_order_filter(
             &self,
-        ) -> ethers::contract::builders::Event<M, SetPositionKeeperFilter> {
-            self.0.event()
-        }
-        #[doc = "Gets the contract's `SetReferralStorage` event"]
-        pub fn set_referral_storage_filter(
-            &self,
-        ) -> ethers::contract::builders::Event<M, SetReferralStorageFilter> {
-            self.0.event()
-        }
-        #[doc = "Gets the contract's `SetRequestKeysStartValues` event"]
-        pub fn set_request_keys_start_values_filter(
-            &self,
-        ) -> ethers::contract::builders::Event<M, SetRequestKeysStartValuesFilter> {
-            self.0.event()
-        }
-        #[doc = "Gets the contract's `WithdrawFees` event"]
-        pub fn withdraw_fees_filter(
-            &self,
-        ) -> ethers::contract::builders::Event<M, WithdrawFeesFilter> {
+        ) -> ethers::contract::builders::Event<M, UpdateSwapOrderFilter> {
             self.0.event()
         }
         #[doc = r" Returns an [`Event`](#ethers_contract::builders::Event) builder for all events of this contract"]
@@ -777,23 +718,21 @@ pub mod b_contract {
         Default,
     )]
     #[ethevent(
-        name = "CancelDecreasePosition",
-        abi = "CancelDecreasePosition(address,address[],address,uint256,uint256,bool,address,uint256,uint256,uint256,uint256,uint256)"
+        name = "CancelDecreaseOrder",
+        abi = "CancelDecreaseOrder(address,uint256,address,uint256,address,uint256,bool,uint256,bool,uint256)"
     )]
-    pub struct CancelDecreasePositionFilter {
+    pub struct CancelDecreaseOrderFilter {
         #[ethevent(indexed)]
         pub account: ethers::core::types::Address,
-        pub path: Vec<ethers::core::types::Address>,
-        pub index_token: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
         pub collateral_delta: ethers::core::types::U256,
+        pub index_token: ethers::core::types::Address,
         pub size_delta: ethers::core::types::U256,
         pub is_long: bool,
-        pub receiver: ethers::core::types::Address,
-        pub acceptable_price: ethers::core::types::U256,
-        pub min_out: ethers::core::types::U256,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
         pub execution_fee: ethers::core::types::U256,
-        pub block_gap: ethers::core::types::U256,
-        pub time_gap: ethers::core::types::U256,
     }
     #[derive(
         Clone,
@@ -805,22 +744,47 @@ pub mod b_contract {
         Default,
     )]
     #[ethevent(
-        name = "CancelIncreasePosition",
-        abi = "CancelIncreasePosition(address,address[],address,uint256,uint256,uint256,bool,uint256,uint256,uint256,uint256)"
+        name = "CancelIncreaseOrder",
+        abi = "CancelIncreaseOrder(address,uint256,address,uint256,address,address,uint256,bool,uint256,bool,uint256)"
     )]
-    pub struct CancelIncreasePositionFilter {
+    pub struct CancelIncreaseOrderFilter {
         #[ethevent(indexed)]
         pub account: ethers::core::types::Address,
-        pub path: Vec<ethers::core::types::Address>,
+        pub order_index: ethers::core::types::U256,
+        pub purchase_token: ethers::core::types::Address,
+        pub purchase_token_amount: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
         pub index_token: ethers::core::types::Address,
+        pub size_delta: ethers::core::types::U256,
+        pub is_long: bool,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub execution_fee: ethers::core::types::U256,
+    }
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthEvent,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethevent(
+        name = "CancelSwapOrder",
+        abi = "CancelSwapOrder(address,uint256,address[],uint256,uint256,uint256,bool,bool,uint256)"
+    )]
+    pub struct CancelSwapOrderFilter {
+        #[ethevent(indexed)]
+        pub account: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+        pub path: Vec<ethers::core::types::Address>,
         pub amount_in: ethers::core::types::U256,
         pub min_out: ethers::core::types::U256,
-        pub size_delta: ethers::core::types::U256,
-        pub is_long: bool,
-        pub acceptable_price: ethers::core::types::U256,
+        pub trigger_ratio: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub should_unwrap: bool,
         pub execution_fee: ethers::core::types::U256,
-        pub block_gap: ethers::core::types::U256,
-        pub time_gap: ethers::core::types::U256,
     }
     #[derive(
         Clone,
@@ -832,24 +796,21 @@ pub mod b_contract {
         Default,
     )]
     #[ethevent(
-        name = "CreateDecreasePosition",
-        abi = "CreateDecreasePosition(address,address[],address,uint256,uint256,bool,address,uint256,uint256,uint256,uint256,uint256,uint256)"
+        name = "CreateDecreaseOrder",
+        abi = "CreateDecreaseOrder(address,uint256,address,uint256,address,uint256,bool,uint256,bool,uint256)"
     )]
-    pub struct CreateDecreasePositionFilter {
+    pub struct CreateDecreaseOrderFilter {
         #[ethevent(indexed)]
         pub account: ethers::core::types::Address,
-        pub path: Vec<ethers::core::types::Address>,
-        pub index_token: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
         pub collateral_delta: ethers::core::types::U256,
+        pub index_token: ethers::core::types::Address,
         pub size_delta: ethers::core::types::U256,
         pub is_long: bool,
-        pub receiver: ethers::core::types::Address,
-        pub acceptable_price: ethers::core::types::U256,
-        pub min_out: ethers::core::types::U256,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
         pub execution_fee: ethers::core::types::U256,
-        pub index: ethers::core::types::U256,
-        pub block_number: ethers::core::types::U256,
-        pub block_time: ethers::core::types::U256,
     }
     #[derive(
         Clone,
@@ -861,24 +822,47 @@ pub mod b_contract {
         Default,
     )]
     #[ethevent(
-        name = "CreateIncreasePosition",
-        abi = "CreateIncreasePosition(address,address[],address,uint256,uint256,uint256,bool,uint256,uint256,uint256,uint256,uint256,uint256)"
+        name = "CreateIncreaseOrder",
+        abi = "CreateIncreaseOrder(address,uint256,address,uint256,address,address,uint256,bool,uint256,bool,uint256)"
     )]
-    pub struct CreateIncreasePositionFilter {
+    pub struct CreateIncreaseOrderFilter {
         #[ethevent(indexed)]
         pub account: ethers::core::types::Address,
-        pub path: Vec<ethers::core::types::Address>,
+        pub order_index: ethers::core::types::U256,
+        pub purchase_token: ethers::core::types::Address,
+        pub purchase_token_amount: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
         pub index_token: ethers::core::types::Address,
+        pub size_delta: ethers::core::types::U256,
+        pub is_long: bool,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub execution_fee: ethers::core::types::U256,
+    }
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthEvent,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethevent(
+        name = "CreateSwapOrder",
+        abi = "CreateSwapOrder(address,uint256,address[],uint256,uint256,uint256,bool,bool,uint256)"
+    )]
+    pub struct CreateSwapOrderFilter {
+        #[ethevent(indexed)]
+        pub account: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+        pub path: Vec<ethers::core::types::Address>,
         pub amount_in: ethers::core::types::U256,
         pub min_out: ethers::core::types::U256,
-        pub size_delta: ethers::core::types::U256,
-        pub is_long: bool,
-        pub acceptable_price: ethers::core::types::U256,
+        pub trigger_ratio: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub should_unwrap: bool,
         pub execution_fee: ethers::core::types::U256,
-        pub index: ethers::core::types::U256,
-        pub block_number: ethers::core::types::U256,
-        pub block_time: ethers::core::types::U256,
-        pub gas_price: ethers::core::types::U256,
     }
     #[derive(
         Clone,
@@ -890,43 +874,22 @@ pub mod b_contract {
         Default,
     )]
     #[ethevent(
-        name = "DecreasePositionReferral",
-        abi = "DecreasePositionReferral(address,uint256,uint256,bytes32,address)"
+        name = "ExecuteDecreaseOrder",
+        abi = "ExecuteDecreaseOrder(address,uint256,address,uint256,address,uint256,bool,uint256,bool,uint256,uint256)"
     )]
-    pub struct DecreasePositionReferralFilter {
-        pub account: ethers::core::types::Address,
-        pub size_delta: ethers::core::types::U256,
-        pub margin_fee_basis_points: ethers::core::types::U256,
-        pub referral_code: [u8; 32],
-        pub referrer: ethers::core::types::Address,
-    }
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthEvent,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethevent(
-        name = "ExecuteDecreasePosition",
-        abi = "ExecuteDecreasePosition(address,address[],address,uint256,uint256,bool,address,uint256,uint256,uint256,uint256,uint256)"
-    )]
-    pub struct ExecuteDecreasePositionFilter {
+    pub struct ExecuteDecreaseOrderFilter {
         #[ethevent(indexed)]
         pub account: ethers::core::types::Address,
-        pub path: Vec<ethers::core::types::Address>,
-        pub index_token: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
         pub collateral_delta: ethers::core::types::U256,
+        pub index_token: ethers::core::types::Address,
         pub size_delta: ethers::core::types::U256,
         pub is_long: bool,
-        pub receiver: ethers::core::types::Address,
-        pub acceptable_price: ethers::core::types::U256,
-        pub min_out: ethers::core::types::U256,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
         pub execution_fee: ethers::core::types::U256,
-        pub block_gap: ethers::core::types::U256,
-        pub time_gap: ethers::core::types::U256,
+        pub execution_price: ethers::core::types::U256,
     }
     #[derive(
         Clone,
@@ -938,22 +901,108 @@ pub mod b_contract {
         Default,
     )]
     #[ethevent(
-        name = "ExecuteIncreasePosition",
-        abi = "ExecuteIncreasePosition(address,address[],address,uint256,uint256,uint256,bool,uint256,uint256,uint256,uint256)"
+        name = "ExecuteIncreaseOrder",
+        abi = "ExecuteIncreaseOrder(address,uint256,address,uint256,address,address,uint256,bool,uint256,bool,uint256,uint256)"
     )]
-    pub struct ExecuteIncreasePositionFilter {
+    pub struct ExecuteIncreaseOrderFilter {
         #[ethevent(indexed)]
         pub account: ethers::core::types::Address,
-        pub path: Vec<ethers::core::types::Address>,
+        pub order_index: ethers::core::types::U256,
+        pub purchase_token: ethers::core::types::Address,
+        pub purchase_token_amount: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
         pub index_token: ethers::core::types::Address,
+        pub size_delta: ethers::core::types::U256,
+        pub is_long: bool,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub execution_fee: ethers::core::types::U256,
+        pub execution_price: ethers::core::types::U256,
+    }
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthEvent,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethevent(
+        name = "ExecuteSwapOrder",
+        abi = "ExecuteSwapOrder(address,uint256,address[],uint256,uint256,uint256,uint256,bool,bool,uint256)"
+    )]
+    pub struct ExecuteSwapOrderFilter {
+        #[ethevent(indexed)]
+        pub account: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+        pub path: Vec<ethers::core::types::Address>,
         pub amount_in: ethers::core::types::U256,
         pub min_out: ethers::core::types::U256,
+        pub amount_out: ethers::core::types::U256,
+        pub trigger_ratio: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub should_unwrap: bool,
+        pub execution_fee: ethers::core::types::U256,
+    }
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthEvent,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethevent(
+        name = "Initialize",
+        abi = "Initialize(address,address,address,address,uint256,uint256)"
+    )]
+    pub struct InitializeFilter {
+        pub router: ethers::core::types::Address,
+        pub vault: ethers::core::types::Address,
+        pub weth: ethers::core::types::Address,
+        pub usdg: ethers::core::types::Address,
+        pub min_execution_fee: ethers::core::types::U256,
+        pub min_purchase_token_amount_usd: ethers::core::types::U256,
+    }
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthEvent,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethevent(
+        name = "UpdateDecreaseOrder",
+        abi = "UpdateDecreaseOrder(address,uint256,address,uint256,address,uint256,bool,uint256,bool)"
+    )]
+    pub struct UpdateDecreaseOrderFilter {
+        #[ethevent(indexed)]
+        pub account: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
+        pub collateral_delta: ethers::core::types::U256,
+        pub index_token: ethers::core::types::Address,
         pub size_delta: ethers::core::types::U256,
         pub is_long: bool,
-        pub acceptable_price: ethers::core::types::U256,
-        pub execution_fee: ethers::core::types::U256,
-        pub block_gap: ethers::core::types::U256,
-        pub time_gap: ethers::core::types::U256,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+    }
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthEvent,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethevent(name = "UpdateGov", abi = "UpdateGov(address)")]
+    pub struct UpdateGovFilter {
+        pub gov: ethers::core::types::Address,
     }
     #[derive(
         Clone,
@@ -965,15 +1014,19 @@ pub mod b_contract {
         Default,
     )]
     #[ethevent(
-        name = "IncreasePositionReferral",
-        abi = "IncreasePositionReferral(address,uint256,uint256,bytes32,address)"
+        name = "UpdateIncreaseOrder",
+        abi = "UpdateIncreaseOrder(address,uint256,address,address,bool,uint256,uint256,bool)"
     )]
-    pub struct IncreasePositionReferralFilter {
+    pub struct UpdateIncreaseOrderFilter {
+        #[ethevent(indexed)]
         pub account: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
+        pub index_token: ethers::core::types::Address,
+        pub is_long: bool,
         pub size_delta: ethers::core::types::U256,
-        pub margin_fee_basis_points: ethers::core::types::U256,
-        pub referral_code: [u8; 32],
-        pub referrer: ethers::core::types::Address,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
     }
     #[derive(
         Clone,
@@ -984,99 +1037,8 @@ pub mod b_contract {
         ethers :: contract :: EthDisplay,
         Default,
     )]
-    #[ethevent(name = "SetAdmin", abi = "SetAdmin(address)")]
-    pub struct SetAdminFilter {
-        pub admin: ethers::core::types::Address,
-    }
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthEvent,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethevent(
-        name = "SetDelayValues",
-        abi = "SetDelayValues(uint256,uint256,uint256)"
-    )]
-    pub struct SetDelayValuesFilter {
-        pub min_block_delay_keeper: ethers::core::types::U256,
-        pub min_time_delay_public: ethers::core::types::U256,
-        pub max_time_delay: ethers::core::types::U256,
-    }
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthEvent,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethevent(name = "SetDepositFee", abi = "SetDepositFee(uint256)")]
-    pub struct SetDepositFeeFilter {
-        pub deposit_fee: ethers::core::types::U256,
-    }
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthEvent,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethevent(
-        name = "SetIncreasePositionBufferBps",
-        abi = "SetIncreasePositionBufferBps(uint256)"
-    )]
-    pub struct SetIncreasePositionBufferBpsFilter {
-        pub increase_position_buffer_bps: ethers::core::types::U256,
-    }
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthEvent,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethevent(name = "SetIsLeverageEnabled", abi = "SetIsLeverageEnabled(bool)")]
-    pub struct SetIsLeverageEnabledFilter {
-        pub is_leverage_enabled: bool,
-    }
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthEvent,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethevent(
-        name = "SetMaxGlobalSizes",
-        abi = "SetMaxGlobalSizes(address[],uint256[],uint256[])"
-    )]
-    pub struct SetMaxGlobalSizesFilter {
-        pub tokens: Vec<ethers::core::types::Address>,
-        pub long_sizes: Vec<ethers::core::types::U256>,
-        pub short_sizes: Vec<ethers::core::types::U256>,
-    }
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthEvent,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethevent(name = "SetMinExecutionFee", abi = "SetMinExecutionFee(uint256)")]
-    pub struct SetMinExecutionFeeFilter {
+    #[ethevent(name = "UpdateMinExecutionFee", abi = "UpdateMinExecutionFee(uint256)")]
+    pub struct UpdateMinExecutionFeeFilter {
         pub min_execution_fee: ethers::core::types::U256,
     }
     #[derive(
@@ -1088,24 +1050,12 @@ pub mod b_contract {
         ethers :: contract :: EthDisplay,
         Default,
     )]
-    #[ethevent(name = "SetPositionKeeper", abi = "SetPositionKeeper(address,bool)")]
-    pub struct SetPositionKeeperFilter {
-        #[ethevent(indexed)]
-        pub account: ethers::core::types::Address,
-        pub is_active: bool,
-    }
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthEvent,
-        ethers :: contract :: EthDisplay,
-        Default,
+    #[ethevent(
+        name = "UpdateMinPurchaseTokenAmountUsd",
+        abi = "UpdateMinPurchaseTokenAmountUsd(uint256)"
     )]
-    #[ethevent(name = "SetReferralStorage", abi = "SetReferralStorage(address)")]
-    pub struct SetReferralStorageFilter {
-        pub referral_storage: ethers::core::types::Address,
+    pub struct UpdateMinPurchaseTokenAmountUsdFilter {
+        pub min_purchase_token_amount_usd: ethers::core::types::U256,
     }
     #[derive(
         Clone,
@@ -1117,49 +1067,39 @@ pub mod b_contract {
         Default,
     )]
     #[ethevent(
-        name = "SetRequestKeysStartValues",
-        abi = "SetRequestKeysStartValues(uint256,uint256)"
+        name = "UpdateSwapOrder",
+        abi = "UpdateSwapOrder(address,uint256,address[],uint256,uint256,uint256,bool,bool,uint256)"
     )]
-    pub struct SetRequestKeysStartValuesFilter {
-        pub increase_position_request_keys_start: ethers::core::types::U256,
-        pub decrease_position_request_keys_start: ethers::core::types::U256,
-    }
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthEvent,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethevent(name = "WithdrawFees", abi = "WithdrawFees(address,address,uint256)")]
-    pub struct WithdrawFeesFilter {
-        pub token: ethers::core::types::Address,
-        pub receiver: ethers::core::types::Address,
-        pub amount: ethers::core::types::U256,
+    pub struct UpdateSwapOrderFilter {
+        #[ethevent(indexed)]
+        pub account: ethers::core::types::Address,
+        pub ordex_index: ethers::core::types::U256,
+        pub path: Vec<ethers::core::types::Address>,
+        pub amount_in: ethers::core::types::U256,
+        pub min_out: ethers::core::types::U256,
+        pub trigger_ratio: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub should_unwrap: bool,
+        pub execution_fee: ethers::core::types::U256,
     }
     #[derive(Debug, Clone, PartialEq, Eq, ethers :: contract :: EthAbiType)]
     pub enum b_contractEvents {
-        CancelDecreasePositionFilter(CancelDecreasePositionFilter),
-        CancelIncreasePositionFilter(CancelIncreasePositionFilter),
-        CreateDecreasePositionFilter(CreateDecreasePositionFilter),
-        CreateIncreasePositionFilter(CreateIncreasePositionFilter),
-        DecreasePositionReferralFilter(DecreasePositionReferralFilter),
-        ExecuteDecreasePositionFilter(ExecuteDecreasePositionFilter),
-        ExecuteIncreasePositionFilter(ExecuteIncreasePositionFilter),
-        IncreasePositionReferralFilter(IncreasePositionReferralFilter),
-        SetAdminFilter(SetAdminFilter),
-        SetDelayValuesFilter(SetDelayValuesFilter),
-        SetDepositFeeFilter(SetDepositFeeFilter),
-        SetIncreasePositionBufferBpsFilter(SetIncreasePositionBufferBpsFilter),
-        SetIsLeverageEnabledFilter(SetIsLeverageEnabledFilter),
-        SetMaxGlobalSizesFilter(SetMaxGlobalSizesFilter),
-        SetMinExecutionFeeFilter(SetMinExecutionFeeFilter),
-        SetPositionKeeperFilter(SetPositionKeeperFilter),
-        SetReferralStorageFilter(SetReferralStorageFilter),
-        SetRequestKeysStartValuesFilter(SetRequestKeysStartValuesFilter),
-        WithdrawFeesFilter(WithdrawFeesFilter),
+        CancelDecreaseOrderFilter(CancelDecreaseOrderFilter),
+        CancelIncreaseOrderFilter(CancelIncreaseOrderFilter),
+        CancelSwapOrderFilter(CancelSwapOrderFilter),
+        CreateDecreaseOrderFilter(CreateDecreaseOrderFilter),
+        CreateIncreaseOrderFilter(CreateIncreaseOrderFilter),
+        CreateSwapOrderFilter(CreateSwapOrderFilter),
+        ExecuteDecreaseOrderFilter(ExecuteDecreaseOrderFilter),
+        ExecuteIncreaseOrderFilter(ExecuteIncreaseOrderFilter),
+        ExecuteSwapOrderFilter(ExecuteSwapOrderFilter),
+        InitializeFilter(InitializeFilter),
+        UpdateDecreaseOrderFilter(UpdateDecreaseOrderFilter),
+        UpdateGovFilter(UpdateGovFilter),
+        UpdateIncreaseOrderFilter(UpdateIncreaseOrderFilter),
+        UpdateMinExecutionFeeFilter(UpdateMinExecutionFeeFilter),
+        UpdateMinPurchaseTokenAmountUsdFilter(UpdateMinPurchaseTokenAmountUsdFilter),
+        UpdateSwapOrderFilter(UpdateSwapOrderFilter),
     }
     impl ethers::contract::EthLogDecode for b_contractEvents {
         fn decode_log(
@@ -1168,64 +1108,55 @@ pub mod b_contract {
         where
             Self: Sized,
         {
-            if let Ok(decoded) = CancelDecreasePositionFilter::decode_log(log) {
-                return Ok(b_contractEvents::CancelDecreasePositionFilter(decoded));
+            if let Ok(decoded) = CancelDecreaseOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::CancelDecreaseOrderFilter(decoded));
             }
-            if let Ok(decoded) = CancelIncreasePositionFilter::decode_log(log) {
-                return Ok(b_contractEvents::CancelIncreasePositionFilter(decoded));
+            if let Ok(decoded) = CancelIncreaseOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::CancelIncreaseOrderFilter(decoded));
             }
-            if let Ok(decoded) = CreateDecreasePositionFilter::decode_log(log) {
-                return Ok(b_contractEvents::CreateDecreasePositionFilter(decoded));
+            if let Ok(decoded) = CancelSwapOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::CancelSwapOrderFilter(decoded));
             }
-            if let Ok(decoded) = CreateIncreasePositionFilter::decode_log(log) {
-                return Ok(b_contractEvents::CreateIncreasePositionFilter(decoded));
+            if let Ok(decoded) = CreateDecreaseOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::CreateDecreaseOrderFilter(decoded));
             }
-            if let Ok(decoded) = DecreasePositionReferralFilter::decode_log(log) {
-                return Ok(b_contractEvents::DecreasePositionReferralFilter(decoded));
+            if let Ok(decoded) = CreateIncreaseOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::CreateIncreaseOrderFilter(decoded));
             }
-            if let Ok(decoded) = ExecuteDecreasePositionFilter::decode_log(log) {
-                return Ok(b_contractEvents::ExecuteDecreasePositionFilter(decoded));
+            if let Ok(decoded) = CreateSwapOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::CreateSwapOrderFilter(decoded));
             }
-            if let Ok(decoded) = ExecuteIncreasePositionFilter::decode_log(log) {
-                return Ok(b_contractEvents::ExecuteIncreasePositionFilter(decoded));
+            if let Ok(decoded) = ExecuteDecreaseOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::ExecuteDecreaseOrderFilter(decoded));
             }
-            if let Ok(decoded) = IncreasePositionReferralFilter::decode_log(log) {
-                return Ok(b_contractEvents::IncreasePositionReferralFilter(decoded));
+            if let Ok(decoded) = ExecuteIncreaseOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::ExecuteIncreaseOrderFilter(decoded));
             }
-            if let Ok(decoded) = SetAdminFilter::decode_log(log) {
-                return Ok(b_contractEvents::SetAdminFilter(decoded));
+            if let Ok(decoded) = ExecuteSwapOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::ExecuteSwapOrderFilter(decoded));
             }
-            if let Ok(decoded) = SetDelayValuesFilter::decode_log(log) {
-                return Ok(b_contractEvents::SetDelayValuesFilter(decoded));
+            if let Ok(decoded) = InitializeFilter::decode_log(log) {
+                return Ok(b_contractEvents::InitializeFilter(decoded));
             }
-            if let Ok(decoded) = SetDepositFeeFilter::decode_log(log) {
-                return Ok(b_contractEvents::SetDepositFeeFilter(decoded));
+            if let Ok(decoded) = UpdateDecreaseOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::UpdateDecreaseOrderFilter(decoded));
             }
-            if let Ok(decoded) = SetIncreasePositionBufferBpsFilter::decode_log(log) {
-                return Ok(b_contractEvents::SetIncreasePositionBufferBpsFilter(
+            if let Ok(decoded) = UpdateGovFilter::decode_log(log) {
+                return Ok(b_contractEvents::UpdateGovFilter(decoded));
+            }
+            if let Ok(decoded) = UpdateIncreaseOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::UpdateIncreaseOrderFilter(decoded));
+            }
+            if let Ok(decoded) = UpdateMinExecutionFeeFilter::decode_log(log) {
+                return Ok(b_contractEvents::UpdateMinExecutionFeeFilter(decoded));
+            }
+            if let Ok(decoded) = UpdateMinPurchaseTokenAmountUsdFilter::decode_log(log) {
+                return Ok(b_contractEvents::UpdateMinPurchaseTokenAmountUsdFilter(
                     decoded,
                 ));
             }
-            if let Ok(decoded) = SetIsLeverageEnabledFilter::decode_log(log) {
-                return Ok(b_contractEvents::SetIsLeverageEnabledFilter(decoded));
-            }
-            if let Ok(decoded) = SetMaxGlobalSizesFilter::decode_log(log) {
-                return Ok(b_contractEvents::SetMaxGlobalSizesFilter(decoded));
-            }
-            if let Ok(decoded) = SetMinExecutionFeeFilter::decode_log(log) {
-                return Ok(b_contractEvents::SetMinExecutionFeeFilter(decoded));
-            }
-            if let Ok(decoded) = SetPositionKeeperFilter::decode_log(log) {
-                return Ok(b_contractEvents::SetPositionKeeperFilter(decoded));
-            }
-            if let Ok(decoded) = SetReferralStorageFilter::decode_log(log) {
-                return Ok(b_contractEvents::SetReferralStorageFilter(decoded));
-            }
-            if let Ok(decoded) = SetRequestKeysStartValuesFilter::decode_log(log) {
-                return Ok(b_contractEvents::SetRequestKeysStartValuesFilter(decoded));
-            }
-            if let Ok(decoded) = WithdrawFeesFilter::decode_log(log) {
-                return Ok(b_contractEvents::WithdrawFeesFilter(decoded));
+            if let Ok(decoded) = UpdateSwapOrderFilter::decode_log(log) {
+                return Ok(b_contractEvents::UpdateSwapOrderFilter(decoded));
             }
             Err(ethers::core::abi::Error::InvalidData)
         }
@@ -1233,29 +1164,26 @@ pub mod b_contract {
     impl ::std::fmt::Display for b_contractEvents {
         fn fmt(&self, f: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
             match self {
-                b_contractEvents::CancelDecreasePositionFilter(element) => element.fmt(f),
-                b_contractEvents::CancelIncreasePositionFilter(element) => element.fmt(f),
-                b_contractEvents::CreateDecreasePositionFilter(element) => element.fmt(f),
-                b_contractEvents::CreateIncreasePositionFilter(element) => element.fmt(f),
-                b_contractEvents::DecreasePositionReferralFilter(element) => element.fmt(f),
-                b_contractEvents::ExecuteDecreasePositionFilter(element) => element.fmt(f),
-                b_contractEvents::ExecuteIncreasePositionFilter(element) => element.fmt(f),
-                b_contractEvents::IncreasePositionReferralFilter(element) => element.fmt(f),
-                b_contractEvents::SetAdminFilter(element) => element.fmt(f),
-                b_contractEvents::SetDelayValuesFilter(element) => element.fmt(f),
-                b_contractEvents::SetDepositFeeFilter(element) => element.fmt(f),
-                b_contractEvents::SetIncreasePositionBufferBpsFilter(element) => element.fmt(f),
-                b_contractEvents::SetIsLeverageEnabledFilter(element) => element.fmt(f),
-                b_contractEvents::SetMaxGlobalSizesFilter(element) => element.fmt(f),
-                b_contractEvents::SetMinExecutionFeeFilter(element) => element.fmt(f),
-                b_contractEvents::SetPositionKeeperFilter(element) => element.fmt(f),
-                b_contractEvents::SetReferralStorageFilter(element) => element.fmt(f),
-                b_contractEvents::SetRequestKeysStartValuesFilter(element) => element.fmt(f),
-                b_contractEvents::WithdrawFeesFilter(element) => element.fmt(f),
+                b_contractEvents::CancelDecreaseOrderFilter(element) => element.fmt(f),
+                b_contractEvents::CancelIncreaseOrderFilter(element) => element.fmt(f),
+                b_contractEvents::CancelSwapOrderFilter(element) => element.fmt(f),
+                b_contractEvents::CreateDecreaseOrderFilter(element) => element.fmt(f),
+                b_contractEvents::CreateIncreaseOrderFilter(element) => element.fmt(f),
+                b_contractEvents::CreateSwapOrderFilter(element) => element.fmt(f),
+                b_contractEvents::ExecuteDecreaseOrderFilter(element) => element.fmt(f),
+                b_contractEvents::ExecuteIncreaseOrderFilter(element) => element.fmt(f),
+                b_contractEvents::ExecuteSwapOrderFilter(element) => element.fmt(f),
+                b_contractEvents::InitializeFilter(element) => element.fmt(f),
+                b_contractEvents::UpdateDecreaseOrderFilter(element) => element.fmt(f),
+                b_contractEvents::UpdateGovFilter(element) => element.fmt(f),
+                b_contractEvents::UpdateIncreaseOrderFilter(element) => element.fmt(f),
+                b_contractEvents::UpdateMinExecutionFeeFilter(element) => element.fmt(f),
+                b_contractEvents::UpdateMinPurchaseTokenAmountUsdFilter(element) => element.fmt(f),
+                b_contractEvents::UpdateSwapOrderFilter(element) => element.fmt(f),
             }
         }
     }
-    #[doc = "Container type for all input parameters for the `BASIS_POINTS_DIVISOR` function with signature `BASIS_POINTS_DIVISOR()` and selector `[18, 96, 130, 207]`"]
+    #[doc = "Container type for all input parameters for the `PRICE_PRECISION` function with signature `PRICE_PRECISION()` and selector `[149, 8, 45, 37]`"]
     #[derive(
         Clone,
         Debug,
@@ -1265,9 +1193,9 @@ pub mod b_contract {
         ethers :: contract :: EthDisplay,
         Default,
     )]
-    #[ethcall(name = "BASIS_POINTS_DIVISOR", abi = "BASIS_POINTS_DIVISOR()")]
-    pub struct BasisPointsDivisorCall;
-    #[doc = "Container type for all input parameters for the `admin` function with signature `admin()` and selector `[248, 81, 164, 64]`"]
+    #[ethcall(name = "PRICE_PRECISION", abi = "PRICE_PRECISION()")]
+    pub struct PricePrecisionCall;
+    #[doc = "Container type for all input parameters for the `USDG_PRECISION` function with signature `USDG_PRECISION()` and selector `[74, 104, 109, 103]`"]
     #[derive(
         Clone,
         Debug,
@@ -1277,9 +1205,9 @@ pub mod b_contract {
         ethers :: contract :: EthDisplay,
         Default,
     )]
-    #[ethcall(name = "admin", abi = "admin()")]
-    pub struct AdminCall;
-    #[doc = "Container type for all input parameters for the `approve` function with signature `approve(address,address,uint256)` and selector `[225, 242, 28, 103]`"]
+    #[ethcall(name = "USDG_PRECISION", abi = "USDG_PRECISION()")]
+    pub struct UsdgPrecisionCall;
+    #[doc = "Container type for all input parameters for the `cancelDecreaseOrder` function with signature `cancelDecreaseOrder(uint256)` and selector `[158, 113, 176, 240]`"]
     #[derive(
         Clone,
         Debug,
@@ -1289,13 +1217,25 @@ pub mod b_contract {
         ethers :: contract :: EthDisplay,
         Default,
     )]
-    #[ethcall(name = "approve", abi = "approve(address,address,uint256)")]
-    pub struct ApproveCall {
-        pub token: ethers::core::types::Address,
-        pub spender: ethers::core::types::Address,
-        pub amount: ethers::core::types::U256,
+    #[ethcall(name = "cancelDecreaseOrder", abi = "cancelDecreaseOrder(uint256)")]
+    pub struct CancelDecreaseOrderCall {
+        pub order_index: ethers::core::types::U256,
     }
-    #[doc = "Container type for all input parameters for the `cancelDecreasePosition` function with signature `cancelDecreasePosition(bytes32,address)` and selector `[96, 163, 98, 226]`"]
+    #[doc = "Container type for all input parameters for the `cancelIncreaseOrder` function with signature `cancelIncreaseOrder(uint256)` and selector `[71, 224, 187, 208]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "cancelIncreaseOrder", abi = "cancelIncreaseOrder(uint256)")]
+    pub struct CancelIncreaseOrderCall {
+        pub order_index: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all input parameters for the `cancelMultiple` function with signature `cancelMultiple(uint256[],uint256[],uint256[])` and selector `[128, 124, 86, 0]`"]
     #[derive(
         Clone,
         Debug,
@@ -1306,14 +1246,29 @@ pub mod b_contract {
         Default,
     )]
     #[ethcall(
-        name = "cancelDecreasePosition",
-        abi = "cancelDecreasePosition(bytes32,address)"
+        name = "cancelMultiple",
+        abi = "cancelMultiple(uint256[],uint256[],uint256[])"
     )]
-    pub struct CancelDecreasePositionCall {
-        pub key: [u8; 32],
-        pub execution_fee_receiver: ethers::core::types::Address,
+    pub struct CancelMultipleCall {
+        pub swap_order_indexes: ::std::vec::Vec<ethers::core::types::U256>,
+        pub increase_order_indexes: ::std::vec::Vec<ethers::core::types::U256>,
+        pub decrease_order_indexes: ::std::vec::Vec<ethers::core::types::U256>,
     }
-    #[doc = "Container type for all input parameters for the `cancelIncreasePosition` function with signature `cancelIncreasePosition(bytes32,address)` and selector `[34, 95, 201, 253]`"]
+    #[doc = "Container type for all input parameters for the `cancelSwapOrder` function with signature `cancelSwapOrder(uint256)` and selector `[248, 130, 172, 7]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "cancelSwapOrder", abi = "cancelSwapOrder(uint256)")]
+    pub struct CancelSwapOrderCall {
+        pub order_index: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all input parameters for the `createDecreaseOrder` function with signature `createDecreaseOrder(address,uint256,address,uint256,bool,uint256,bool)` and selector `[193, 108, 222, 138]`"]
     #[derive(
         Clone,
         Debug,
@@ -1324,40 +1279,19 @@ pub mod b_contract {
         Default,
     )]
     #[ethcall(
-        name = "cancelIncreasePosition",
-        abi = "cancelIncreasePosition(bytes32,address)"
+        name = "createDecreaseOrder",
+        abi = "createDecreaseOrder(address,uint256,address,uint256,bool,uint256,bool)"
     )]
-    pub struct CancelIncreasePositionCall {
-        pub key: [u8; 32],
-        pub execution_fee_receiver: ethers::core::types::Address,
-    }
-    #[doc = "Container type for all input parameters for the `createDecreasePosition` function with signature `createDecreasePosition(address[],address,uint256,uint256,bool,address,uint256,uint256,uint256,bool)` and selector `[231, 13, 210, 252]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "createDecreasePosition",
-        abi = "createDecreasePosition(address[],address,uint256,uint256,bool,address,uint256,uint256,uint256,bool)"
-    )]
-    pub struct CreateDecreasePositionCall {
-        pub path: ::std::vec::Vec<ethers::core::types::Address>,
+    pub struct CreateDecreaseOrderCall {
         pub index_token: ethers::core::types::Address,
-        pub collateral_delta: ethers::core::types::U256,
         pub size_delta: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
+        pub collateral_delta: ethers::core::types::U256,
         pub is_long: bool,
-        pub receiver: ethers::core::types::Address,
-        pub acceptable_price: ethers::core::types::U256,
-        pub min_out: ethers::core::types::U256,
-        pub execution_fee: ethers::core::types::U256,
-        pub withdraw_eth: bool,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
     }
-    #[doc = "Container type for all input parameters for the `createIncreasePosition` function with signature `createIncreasePosition(address[],address,uint256,uint256,uint256,bool,uint256,uint256,bytes32)` and selector `[201, 135, 65, 112]`"]
+    #[doc = "Container type for all input parameters for the `createIncreaseOrder` function with signature `createIncreaseOrder(address[],uint256,address,uint256,uint256,address,bool,uint256,bool,uint256,bool)` and selector `[177, 66, 164, 176]`"]
     #[derive(
         Clone,
         Debug,
@@ -1368,21 +1302,74 @@ pub mod b_contract {
         Default,
     )]
     #[ethcall(
-        name = "createIncreasePosition",
-        abi = "createIncreasePosition(address[],address,uint256,uint256,uint256,bool,uint256,uint256,bytes32)"
+        name = "createIncreaseOrder",
+        abi = "createIncreaseOrder(address[],uint256,address,uint256,uint256,address,bool,uint256,bool,uint256,bool)"
     )]
-    pub struct CreateIncreasePositionCall {
+    pub struct CreateIncreaseOrderCall {
         pub path: ::std::vec::Vec<ethers::core::types::Address>,
+        pub amount_in: ethers::core::types::U256,
         pub index_token: ethers::core::types::Address,
+        pub min_out: ethers::core::types::U256,
+        pub size_delta: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
+        pub is_long: bool,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub execution_fee: ethers::core::types::U256,
+        pub should_wrap: bool,
+    }
+    #[doc = "Container type for all input parameters for the `createSwapOrder` function with signature `createSwapOrder(address[],uint256,uint256,uint256,bool,uint256,bool,bool)` and selector `[38, 154, 230, 194]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(
+        name = "createSwapOrder",
+        abi = "createSwapOrder(address[],uint256,uint256,uint256,bool,uint256,bool,bool)"
+    )]
+    pub struct CreateSwapOrderCall {
+        pub path: ::std::vec::Vec<ethers::core::types::Address>,
         pub amount_in: ethers::core::types::U256,
         pub min_out: ethers::core::types::U256,
-        pub size_delta: ethers::core::types::U256,
-        pub is_long: bool,
-        pub acceptable_price: ethers::core::types::U256,
+        pub trigger_ratio: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
         pub execution_fee: ethers::core::types::U256,
-        pub referral_code: [u8; 32],
+        pub should_wrap: bool,
+        pub should_unwrap: bool,
     }
-    #[doc = "Container type for all input parameters for the `createIncreasePositionETH` function with signature `createIncreasePositionETH(address[],address,uint256,uint256,bool,uint256,uint256,bytes32)` and selector `[51, 46, 3, 130]`"]
+    #[doc = "Container type for all input parameters for the `decreaseOrders` function with signature `decreaseOrders(address,uint256)` and selector `[242, 210, 224, 27]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "decreaseOrders", abi = "decreaseOrders(address,uint256)")]
+    pub struct DecreaseOrdersCall(
+        pub ethers::core::types::Address,
+        pub ethers::core::types::U256,
+    );
+    #[doc = "Container type for all input parameters for the `decreaseOrdersIndex` function with signature `decreaseOrdersIndex(address)` and selector `[213, 102, 208, 202]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "decreaseOrdersIndex", abi = "decreaseOrdersIndex(address)")]
+    pub struct DecreaseOrdersIndexCall(pub ethers::core::types::Address);
+    #[doc = "Container type for all input parameters for the `executeDecreaseOrder` function with signature `executeDecreaseOrder(address,uint256,address)` and selector `[17, 217, 68, 74]`"]
     #[derive(
         Clone,
         Debug,
@@ -1393,20 +1380,15 @@ pub mod b_contract {
         Default,
     )]
     #[ethcall(
-        name = "createIncreasePositionETH",
-        abi = "createIncreasePositionETH(address[],address,uint256,uint256,bool,uint256,uint256,bytes32)"
+        name = "executeDecreaseOrder",
+        abi = "executeDecreaseOrder(address,uint256,address)"
     )]
-    pub struct CreateIncreasePositionETHCall {
-        pub path: ::std::vec::Vec<ethers::core::types::Address>,
-        pub index_token: ethers::core::types::Address,
-        pub min_out: ethers::core::types::U256,
-        pub size_delta: ethers::core::types::U256,
-        pub is_long: bool,
-        pub acceptable_price: ethers::core::types::U256,
-        pub execution_fee: ethers::core::types::U256,
-        pub referral_code: [u8; 32],
+    pub struct ExecuteDecreaseOrderCall {
+        pub address: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+        pub fee_receiver: ethers::core::types::Address,
     }
-    #[doc = "Container type for all input parameters for the `decreasePositionRequestKeys` function with signature `decreasePositionRequestKeys(uint256)` and selector `[66, 120, 85, 95]`"]
+    #[doc = "Container type for all input parameters for the `executeIncreaseOrder` function with signature `executeIncreaseOrder(address,uint256,address)` and selector `[211, 138, 181, 25]`"]
     #[derive(
         Clone,
         Debug,
@@ -1417,86 +1399,15 @@ pub mod b_contract {
         Default,
     )]
     #[ethcall(
-        name = "decreasePositionRequestKeys",
-        abi = "decreasePositionRequestKeys(uint256)"
+        name = "executeIncreaseOrder",
+        abi = "executeIncreaseOrder(address,uint256,address)"
     )]
-    pub struct DecreasePositionRequestKeysCall(pub ethers::core::types::U256);
-    #[doc = "Container type for all input parameters for the `decreasePositionRequestKeysStart` function with signature `decreasePositionRequestKeysStart()` and selector `[27, 202, 140, 240]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "decreasePositionRequestKeysStart",
-        abi = "decreasePositionRequestKeysStart()"
-    )]
-    pub struct DecreasePositionRequestKeysStartCall;
-    #[doc = "Container type for all input parameters for the `decreasePositionRequests` function with signature `decreasePositionRequests(bytes32)` and selector `[31, 40, 81, 6]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "decreasePositionRequests",
-        abi = "decreasePositionRequests(bytes32)"
-    )]
-    pub struct DecreasePositionRequestsCall(pub [u8; 32]);
-    #[doc = "Container type for all input parameters for the `decreasePositionsIndex` function with signature `decreasePositionsIndex(address)` and selector `[250, 68, 69, 119]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "decreasePositionsIndex",
-        abi = "decreasePositionsIndex(address)"
-    )]
-    pub struct DecreasePositionsIndexCall(pub ethers::core::types::Address);
-    #[doc = "Container type for all input parameters for the `depositFee` function with signature `depositFee()` and selector `[103, 165, 39, 147]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "depositFee", abi = "depositFee()")]
-    pub struct DepositFeeCall;
-    #[doc = "Container type for all input parameters for the `executeDecreasePosition` function with signature `executeDecreasePosition(bytes32,address)` and selector `[13, 77, 0, 61]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "executeDecreasePosition",
-        abi = "executeDecreasePosition(bytes32,address)"
-    )]
-    pub struct ExecuteDecreasePositionCall {
-        pub key: [u8; 32],
-        pub execution_fee_receiver: ethers::core::types::Address,
+    pub struct ExecuteIncreaseOrderCall {
+        pub address: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+        pub fee_receiver: ethers::core::types::Address,
     }
-    #[doc = "Container type for all input parameters for the `executeDecreasePositions` function with signature `executeDecreasePositions(uint256,address)` and selector `[243, 136, 61, 139]`"]
+    #[doc = "Container type for all input parameters for the `executeSwapOrder` function with signature `executeSwapOrder(address,uint256,address)` and selector `[7, 199, 237, 195]`"]
     #[derive(
         Clone,
         Debug,
@@ -1507,111 +1418,15 @@ pub mod b_contract {
         Default,
     )]
     #[ethcall(
-        name = "executeDecreasePositions",
-        abi = "executeDecreasePositions(uint256,address)"
+        name = "executeSwapOrder",
+        abi = "executeSwapOrder(address,uint256,address)"
     )]
-    pub struct ExecuteDecreasePositionsCall {
-        pub end_index: ethers::core::types::U256,
-        pub execution_fee_receiver: ethers::core::types::Address,
-    }
-    #[doc = "Container type for all input parameters for the `executeIncreasePosition` function with signature `executeIncreasePosition(bytes32,address)` and selector `[39, 180, 44, 15]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "executeIncreasePosition",
-        abi = "executeIncreasePosition(bytes32,address)"
-    )]
-    pub struct ExecuteIncreasePositionCall {
-        pub key: [u8; 32],
-        pub execution_fee_receiver: ethers::core::types::Address,
-    }
-    #[doc = "Container type for all input parameters for the `executeIncreasePositions` function with signature `executeIncreasePositions(uint256,address)` and selector `[154, 32, 129, 0]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "executeIncreasePositions",
-        abi = "executeIncreasePositions(uint256,address)"
-    )]
-    pub struct ExecuteIncreasePositionsCall {
-        pub end_index: ethers::core::types::U256,
-        pub execution_fee_receiver: ethers::core::types::Address,
-    }
-    #[doc = "Container type for all input parameters for the `feeReserves` function with signature `feeReserves(address)` and selector `[28, 233, 203, 143]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "feeReserves", abi = "feeReserves(address)")]
-    pub struct FeeReservesCall(pub ethers::core::types::Address);
-    #[doc = "Container type for all input parameters for the `getDecreasePositionRequestPath` function with signature `getDecreasePositionRequestPath(bytes32)` and selector `[93, 92, 34, 232]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "getDecreasePositionRequestPath",
-        abi = "getDecreasePositionRequestPath(bytes32)"
-    )]
-    pub struct GetDecreasePositionRequestPathCall {
-        pub key: [u8; 32],
-    }
-    #[doc = "Container type for all input parameters for the `getIncreasePositionRequestPath` function with signature `getIncreasePositionRequestPath(bytes32)` and selector `[149, 233, 187, 215]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "getIncreasePositionRequestPath",
-        abi = "getIncreasePositionRequestPath(bytes32)"
-    )]
-    pub struct GetIncreasePositionRequestPathCall {
-        pub key: [u8; 32],
-    }
-    #[doc = "Container type for all input parameters for the `getRequestKey` function with signature `getRequestKey(address,uint256)` and selector `[98, 248, 163, 254]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "getRequestKey", abi = "getRequestKey(address,uint256)")]
-    pub struct GetRequestKeyCall {
+    pub struct ExecuteSwapOrderCall {
         pub account: ethers::core::types::Address,
-        pub index: ethers::core::types::U256,
+        pub order_index: ethers::core::types::U256,
+        pub fee_receiver: ethers::core::types::Address,
     }
-    #[doc = "Container type for all input parameters for the `getRequestQueueLengths` function with signature `getRequestQueueLengths()` and selector `[242, 206, 166, 165]`"]
+    #[doc = "Container type for all input parameters for the `getDecreaseOrder` function with signature `getDecreaseOrder(address,uint256)` and selector `[2, 96, 50, 238]`"]
     #[derive(
         Clone,
         Debug,
@@ -1621,8 +1436,55 @@ pub mod b_contract {
         ethers :: contract :: EthDisplay,
         Default,
     )]
-    #[ethcall(name = "getRequestQueueLengths", abi = "getRequestQueueLengths()")]
-    pub struct GetRequestQueueLengthsCall;
+    #[ethcall(name = "getDecreaseOrder", abi = "getDecreaseOrder(address,uint256)")]
+    pub struct GetDecreaseOrderCall {
+        pub account: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all input parameters for the `getIncreaseOrder` function with signature `getIncreaseOrder(address,uint256)` and selector `[211, 186, 177, 209]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "getIncreaseOrder", abi = "getIncreaseOrder(address,uint256)")]
+    pub struct GetIncreaseOrderCall {
+        pub account: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all input parameters for the `getSwapOrder` function with signature `getSwapOrder(address,uint256)` and selector `[208, 212, 12, 214]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "getSwapOrder", abi = "getSwapOrder(address,uint256)")]
+    pub struct GetSwapOrderCall {
+        pub account: ethers::core::types::Address,
+        pub order_index: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all input parameters for the `getUsdgMinPrice` function with signature `getUsdgMinPrice(address)` and selector `[158, 35, 222, 92]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "getUsdgMinPrice", abi = "getUsdgMinPrice(address)")]
+    pub struct GetUsdgMinPriceCall {
+        pub other_token: ethers::core::types::Address,
+    }
     #[doc = "Container type for all input parameters for the `gov` function with signature `gov()` and selector `[18, 212, 58, 81]`"]
     #[derive(
         Clone,
@@ -1635,7 +1497,34 @@ pub mod b_contract {
     )]
     #[ethcall(name = "gov", abi = "gov()")]
     pub struct GovCall;
-    #[doc = "Container type for all input parameters for the `increasePositionBufferBps` function with signature `increasePositionBufferBps()` and selector `[152, 209, 224, 58]`"]
+    #[doc = "Container type for all input parameters for the `increaseOrders` function with signature `increaseOrders(address,uint256)` and selector `[43, 125, 98, 144]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "increaseOrders", abi = "increaseOrders(address,uint256)")]
+    pub struct IncreaseOrdersCall(
+        pub ethers::core::types::Address,
+        pub ethers::core::types::U256,
+    );
+    #[doc = "Container type for all input parameters for the `increaseOrdersIndex` function with signature `increaseOrdersIndex(address)` and selector `[174, 194, 36, 85]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "increaseOrdersIndex", abi = "increaseOrdersIndex(address)")]
+    pub struct IncreaseOrdersIndexCall(pub ethers::core::types::Address);
+    #[doc = "Container type for all input parameters for the `initialize` function with signature `initialize(address,address,address,address,uint256,uint256)` and selector `[215, 196, 28, 121]`"]
     #[derive(
         Clone,
         Debug,
@@ -1646,11 +1535,18 @@ pub mod b_contract {
         Default,
     )]
     #[ethcall(
-        name = "increasePositionBufferBps",
-        abi = "increasePositionBufferBps()"
+        name = "initialize",
+        abi = "initialize(address,address,address,address,uint256,uint256)"
     )]
-    pub struct IncreasePositionBufferBpsCall;
-    #[doc = "Container type for all input parameters for the `increasePositionRequestKeys` function with signature `increasePositionRequestKeys(uint256)` and selector `[4, 34, 89, 84]`"]
+    pub struct InitializeCall {
+        pub router: ethers::core::types::Address,
+        pub vault: ethers::core::types::Address,
+        pub weth: ethers::core::types::Address,
+        pub usdg: ethers::core::types::Address,
+        pub min_execution_fee: ethers::core::types::U256,
+        pub min_purchase_token_amount_usd: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all input parameters for the `isInitialized` function with signature `isInitialized()` and selector `[57, 46, 83, 205]`"]
     #[derive(
         Clone,
         Debug,
@@ -1660,128 +1556,8 @@ pub mod b_contract {
         ethers :: contract :: EthDisplay,
         Default,
     )]
-    #[ethcall(
-        name = "increasePositionRequestKeys",
-        abi = "increasePositionRequestKeys(uint256)"
-    )]
-    pub struct IncreasePositionRequestKeysCall(pub ethers::core::types::U256);
-    #[doc = "Container type for all input parameters for the `increasePositionRequestKeysStart` function with signature `increasePositionRequestKeysStart()` and selector `[155, 87, 134, 32]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "increasePositionRequestKeysStart",
-        abi = "increasePositionRequestKeysStart()"
-    )]
-    pub struct IncreasePositionRequestKeysStartCall;
-    #[doc = "Container type for all input parameters for the `increasePositionRequests` function with signature `increasePositionRequests(bytes32)` and selector `[250, 249, 144, 243]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "increasePositionRequests",
-        abi = "increasePositionRequests(bytes32)"
-    )]
-    pub struct IncreasePositionRequestsCall(pub [u8; 32]);
-    #[doc = "Container type for all input parameters for the `increasePositionsIndex` function with signature `increasePositionsIndex(address)` and selector `[99, 52, 81, 222]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "increasePositionsIndex",
-        abi = "increasePositionsIndex(address)"
-    )]
-    pub struct IncreasePositionsIndexCall(pub ethers::core::types::Address);
-    #[doc = "Container type for all input parameters for the `isLeverageEnabled` function with signature `isLeverageEnabled()` and selector `[62, 114, 162, 98]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "isLeverageEnabled", abi = "isLeverageEnabled()")]
-    pub struct IsLeverageEnabledCall;
-    #[doc = "Container type for all input parameters for the `isPositionKeeper` function with signature `isPositionKeeper(address)` and selector `[54, 235, 164, 138]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "isPositionKeeper", abi = "isPositionKeeper(address)")]
-    pub struct IsPositionKeeperCall(pub ethers::core::types::Address);
-    #[doc = "Container type for all input parameters for the `maxGlobalLongSizes` function with signature `maxGlobalLongSizes(address)` and selector `[16, 69, 199, 78]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "maxGlobalLongSizes", abi = "maxGlobalLongSizes(address)")]
-    pub struct MaxGlobalLongSizesCall(pub ethers::core::types::Address);
-    #[doc = "Container type for all input parameters for the `maxGlobalShortSizes` function with signature `maxGlobalShortSizes(address)` and selector `[150, 152, 210, 90]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "maxGlobalShortSizes", abi = "maxGlobalShortSizes(address)")]
-    pub struct MaxGlobalShortSizesCall(pub ethers::core::types::Address);
-    #[doc = "Container type for all input parameters for the `maxTimeDelay` function with signature `maxTimeDelay()` and selector `[203, 2, 105, 201]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "maxTimeDelay", abi = "maxTimeDelay()")]
-    pub struct MaxTimeDelayCall;
-    #[doc = "Container type for all input parameters for the `minBlockDelayKeeper` function with signature `minBlockDelayKeeper()` and selector `[88, 65, 252, 170]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "minBlockDelayKeeper", abi = "minBlockDelayKeeper()")]
-    pub struct MinBlockDelayKeeperCall;
+    #[ethcall(name = "isInitialized", abi = "isInitialized()")]
+    pub struct IsInitializedCall;
     #[doc = "Container type for all input parameters for the `minExecutionFee` function with signature `minExecutionFee()` and selector `[99, 174, 33, 3]`"]
     #[derive(
         Clone,
@@ -1794,7 +1570,7 @@ pub mod b_contract {
     )]
     #[ethcall(name = "minExecutionFee", abi = "minExecutionFee()")]
     pub struct MinExecutionFeeCall;
-    #[doc = "Container type for all input parameters for the `minTimeDelayPublic` function with signature `minTimeDelayPublic()` and selector `[58, 42, 128, 199]`"]
+    #[doc = "Container type for all input parameters for the `minPurchaseTokenAmountUsd` function with signature `minPurchaseTokenAmountUsd()` and selector `[141, 225, 12, 46]`"]
     #[derive(
         Clone,
         Debug,
@@ -1804,20 +1580,11 @@ pub mod b_contract {
         ethers :: contract :: EthDisplay,
         Default,
     )]
-    #[ethcall(name = "minTimeDelayPublic", abi = "minTimeDelayPublic()")]
-    pub struct MinTimeDelayPublicCall;
-    #[doc = "Container type for all input parameters for the `referralStorage` function with signature `referralStorage()` and selector `[0, 108, 195, 94]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
+    #[ethcall(
+        name = "minPurchaseTokenAmountUsd",
+        abi = "minPurchaseTokenAmountUsd()"
     )]
-    #[ethcall(name = "referralStorage", abi = "referralStorage()")]
-    pub struct ReferralStorageCall;
+    pub struct MinPurchaseTokenAmountUsdCall;
     #[doc = "Container type for all input parameters for the `router` function with signature `router()` and selector `[248, 135, 234, 64]`"]
     #[derive(
         Clone,
@@ -1830,68 +1597,6 @@ pub mod b_contract {
     )]
     #[ethcall(name = "router", abi = "router()")]
     pub struct RouterCall;
-    #[doc = "Container type for all input parameters for the `sendValue` function with signature `sendValue(address,uint256)` and selector `[36, 160, 132, 223]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "sendValue", abi = "sendValue(address,uint256)")]
-    pub struct SendValueCall {
-        pub receiver: ethers::core::types::Address,
-        pub amount: ethers::core::types::U256,
-    }
-    #[doc = "Container type for all input parameters for the `setAdmin` function with signature `setAdmin(address)` and selector `[112, 75, 108, 2]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "setAdmin", abi = "setAdmin(address)")]
-    pub struct SetAdminCall {
-        pub admin: ethers::core::types::Address,
-    }
-    #[doc = "Container type for all input parameters for the `setDelayValues` function with signature `setDelayValues(uint256,uint256,uint256)` and selector `[64, 103, 177, 50]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "setDelayValues",
-        abi = "setDelayValues(uint256,uint256,uint256)"
-    )]
-    pub struct SetDelayValuesCall {
-        pub min_block_delay_keeper: ethers::core::types::U256,
-        pub min_time_delay_public: ethers::core::types::U256,
-        pub max_time_delay: ethers::core::types::U256,
-    }
-    #[doc = "Container type for all input parameters for the `setDepositFee` function with signature `setDepositFee(uint256)` and selector `[73, 10, 226, 16]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "setDepositFee", abi = "setDepositFee(uint256)")]
-    pub struct SetDepositFeeCall {
-        pub deposit_fee: ethers::core::types::U256,
-    }
     #[doc = "Container type for all input parameters for the `setGov` function with signature `setGov(address)` and selector `[207, 173, 87, 162]`"]
     #[derive(
         Clone,
@@ -1905,56 +1610,6 @@ pub mod b_contract {
     #[ethcall(name = "setGov", abi = "setGov(address)")]
     pub struct SetGovCall {
         pub gov: ethers::core::types::Address,
-    }
-    #[doc = "Container type for all input parameters for the `setIncreasePositionBufferBps` function with signature `setIncreasePositionBufferBps(uint256)` and selector `[35, 59, 254, 59]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "setIncreasePositionBufferBps",
-        abi = "setIncreasePositionBufferBps(uint256)"
-    )]
-    pub struct SetIncreasePositionBufferBpsCall {
-        pub increase_position_buffer_bps: ethers::core::types::U256,
-    }
-    #[doc = "Container type for all input parameters for the `setIsLeverageEnabled` function with signature `setIsLeverageEnabled(bool)` and selector `[124, 46, 185, 247]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "setIsLeverageEnabled", abi = "setIsLeverageEnabled(bool)")]
-    pub struct SetIsLeverageEnabledCall {
-        pub is_leverage_enabled: bool,
-    }
-    #[doc = "Container type for all input parameters for the `setMaxGlobalSizes` function with signature `setMaxGlobalSizes(address[],uint256[],uint256[])` and selector `[239, 18, 198, 126]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(
-        name = "setMaxGlobalSizes",
-        abi = "setMaxGlobalSizes(address[],uint256[],uint256[])"
-    )]
-    pub struct SetMaxGlobalSizesCall {
-        pub tokens: ::std::vec::Vec<ethers::core::types::Address>,
-        pub long_sizes: ::std::vec::Vec<ethers::core::types::U256>,
-        pub short_sizes: ::std::vec::Vec<ethers::core::types::U256>,
     }
     #[doc = "Container type for all input parameters for the `setMinExecutionFee` function with signature `setMinExecutionFee(uint256)` and selector `[252, 44, 238, 98]`"]
     #[derive(
@@ -1970,36 +1625,7 @@ pub mod b_contract {
     pub struct SetMinExecutionFeeCall {
         pub min_execution_fee: ethers::core::types::U256,
     }
-    #[doc = "Container type for all input parameters for the `setPositionKeeper` function with signature `setPositionKeeper(address,bool)` and selector `[52, 34, 234, 209]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "setPositionKeeper", abi = "setPositionKeeper(address,bool)")]
-    pub struct SetPositionKeeperCall {
-        pub account: ethers::core::types::Address,
-        pub is_active: bool,
-    }
-    #[doc = "Container type for all input parameters for the `setReferralStorage` function with signature `setReferralStorage(address)` and selector `[174, 77, 127, 154]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "setReferralStorage", abi = "setReferralStorage(address)")]
-    pub struct SetReferralStorageCall {
-        pub referral_storage: ethers::core::types::Address,
-    }
-    #[doc = "Container type for all input parameters for the `setRequestKeysStartValues` function with signature `setRequestKeysStartValues(uint256,uint256)` and selector `[48, 138, 168, 31]`"]
+    #[doc = "Container type for all input parameters for the `setMinPurchaseTokenAmountUsd` function with signature `setMinPurchaseTokenAmountUsd(uint256)` and selector `[13, 92, 201, 56]`"]
     #[derive(
         Clone,
         Debug,
@@ -2010,12 +1636,150 @@ pub mod b_contract {
         Default,
     )]
     #[ethcall(
-        name = "setRequestKeysStartValues",
-        abi = "setRequestKeysStartValues(uint256,uint256)"
+        name = "setMinPurchaseTokenAmountUsd",
+        abi = "setMinPurchaseTokenAmountUsd(uint256)"
     )]
-    pub struct SetRequestKeysStartValuesCall {
-        pub increase_position_request_keys_start: ethers::core::types::U256,
-        pub decrease_position_request_keys_start: ethers::core::types::U256,
+    pub struct SetMinPurchaseTokenAmountUsdCall {
+        pub min_purchase_token_amount_usd: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all input parameters for the `swapOrders` function with signature `swapOrders(address,uint256)` and selector `[121, 34, 31, 162]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "swapOrders", abi = "swapOrders(address,uint256)")]
+    pub struct SwapOrdersCall(
+        pub ethers::core::types::Address,
+        pub ethers::core::types::U256,
+    );
+    #[doc = "Container type for all input parameters for the `swapOrdersIndex` function with signature `swapOrdersIndex(address)` and selector `[0, 207, 6, 107]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "swapOrdersIndex", abi = "swapOrdersIndex(address)")]
+    pub struct SwapOrdersIndexCall(pub ethers::core::types::Address);
+    #[doc = "Container type for all input parameters for the `updateDecreaseOrder` function with signature `updateDecreaseOrder(uint256,uint256,uint256,uint256,bool)` and selector `[163, 151, 234, 84]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(
+        name = "updateDecreaseOrder",
+        abi = "updateDecreaseOrder(uint256,uint256,uint256,uint256,bool)"
+    )]
+    pub struct UpdateDecreaseOrderCall {
+        pub order_index: ethers::core::types::U256,
+        pub collateral_delta: ethers::core::types::U256,
+        pub size_delta: ethers::core::types::U256,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+    }
+    #[doc = "Container type for all input parameters for the `updateIncreaseOrder` function with signature `updateIncreaseOrder(uint256,uint256,uint256,bool)` and selector `[153, 131, 238, 27]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(
+        name = "updateIncreaseOrder",
+        abi = "updateIncreaseOrder(uint256,uint256,uint256,bool)"
+    )]
+    pub struct UpdateIncreaseOrderCall {
+        pub order_index: ethers::core::types::U256,
+        pub size_delta: ethers::core::types::U256,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+    }
+    #[doc = "Container type for all input parameters for the `updateSwapOrder` function with signature `updateSwapOrder(uint256,uint256,uint256,bool)` and selector `[200, 107, 15, 125]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(
+        name = "updateSwapOrder",
+        abi = "updateSwapOrder(uint256,uint256,uint256,bool)"
+    )]
+    pub struct UpdateSwapOrderCall {
+        pub order_index: ethers::core::types::U256,
+        pub min_out: ethers::core::types::U256,
+        pub trigger_ratio: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+    }
+    #[doc = "Container type for all input parameters for the `usdg` function with signature `usdg()` and selector `[245, 185, 27, 123]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(name = "usdg", abi = "usdg()")]
+    pub struct UsdgCall;
+    #[doc = "Container type for all input parameters for the `validatePositionOrderPrice` function with signature `validatePositionOrderPrice(bool,uint256,address,bool,bool)` and selector `[76, 84, 240, 176]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(
+        name = "validatePositionOrderPrice",
+        abi = "validatePositionOrderPrice(bool,uint256,address,bool,bool)"
+    )]
+    pub struct ValidatePositionOrderPriceCall {
+        pub trigger_above_threshold: bool,
+        pub trigger_price: ethers::core::types::U256,
+        pub index_token: ethers::core::types::Address,
+        pub maximize_price: bool,
+        pub raise: bool,
+    }
+    #[doc = "Container type for all input parameters for the `validateSwapOrderPriceWithTriggerAboveThreshold` function with signature `validateSwapOrderPriceWithTriggerAboveThreshold(address[],uint256)` and selector `[196, 161, 130, 27]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthCall,
+        ethers :: contract :: EthDisplay,
+        Default,
+    )]
+    #[ethcall(
+        name = "validateSwapOrderPriceWithTriggerAboveThreshold",
+        abi = "validateSwapOrderPriceWithTriggerAboveThreshold(address[],uint256)"
+    )]
+    pub struct ValidateSwapOrderPriceWithTriggerAboveThresholdCall {
+        pub path: ::std::vec::Vec<ethers::core::types::Address>,
+        pub trigger_ratio: ethers::core::types::U256,
     }
     #[doc = "Container type for all input parameters for the `vault` function with signature `vault()` and selector `[251, 250, 119, 207]`"]
     #[derive(
@@ -2041,271 +1805,166 @@ pub mod b_contract {
     )]
     #[ethcall(name = "weth", abi = "weth()")]
     pub struct WethCall;
-    #[doc = "Container type for all input parameters for the `withdrawFees` function with signature `withdrawFees(address,address)` and selector `[242, 85, 82, 120]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthCall,
-        ethers :: contract :: EthDisplay,
-        Default,
-    )]
-    #[ethcall(name = "withdrawFees", abi = "withdrawFees(address,address)")]
-    pub struct WithdrawFeesCall {
-        pub token: ethers::core::types::Address,
-        pub receiver: ethers::core::types::Address,
-    }
     #[derive(Debug, Clone, PartialEq, Eq, ethers :: contract :: EthAbiType)]
     pub enum b_contractCalls {
-        BasisPointsDivisor(BasisPointsDivisorCall),
-        Admin(AdminCall),
-        Approve(ApproveCall),
-        CancelDecreasePosition(CancelDecreasePositionCall),
-        CancelIncreasePosition(CancelIncreasePositionCall),
-        CreateDecreasePosition(CreateDecreasePositionCall),
-        CreateIncreasePosition(CreateIncreasePositionCall),
-        CreateIncreasePositionETH(CreateIncreasePositionETHCall),
-        DecreasePositionRequestKeys(DecreasePositionRequestKeysCall),
-        DecreasePositionRequestKeysStart(DecreasePositionRequestKeysStartCall),
-        DecreasePositionRequests(DecreasePositionRequestsCall),
-        DecreasePositionsIndex(DecreasePositionsIndexCall),
-        DepositFee(DepositFeeCall),
-        ExecuteDecreasePosition(ExecuteDecreasePositionCall),
-        ExecuteDecreasePositions(ExecuteDecreasePositionsCall),
-        ExecuteIncreasePosition(ExecuteIncreasePositionCall),
-        ExecuteIncreasePositions(ExecuteIncreasePositionsCall),
-        FeeReserves(FeeReservesCall),
-        GetDecreasePositionRequestPath(GetDecreasePositionRequestPathCall),
-        GetIncreasePositionRequestPath(GetIncreasePositionRequestPathCall),
-        GetRequestKey(GetRequestKeyCall),
-        GetRequestQueueLengths(GetRequestQueueLengthsCall),
+        PricePrecision(PricePrecisionCall),
+        UsdgPrecision(UsdgPrecisionCall),
+        CancelDecreaseOrder(CancelDecreaseOrderCall),
+        CancelIncreaseOrder(CancelIncreaseOrderCall),
+        CancelMultiple(CancelMultipleCall),
+        CancelSwapOrder(CancelSwapOrderCall),
+        CreateDecreaseOrder(CreateDecreaseOrderCall),
+        CreateIncreaseOrder(CreateIncreaseOrderCall),
+        CreateSwapOrder(CreateSwapOrderCall),
+        DecreaseOrders(DecreaseOrdersCall),
+        DecreaseOrdersIndex(DecreaseOrdersIndexCall),
+        ExecuteDecreaseOrder(ExecuteDecreaseOrderCall),
+        ExecuteIncreaseOrder(ExecuteIncreaseOrderCall),
+        ExecuteSwapOrder(ExecuteSwapOrderCall),
+        GetDecreaseOrder(GetDecreaseOrderCall),
+        GetIncreaseOrder(GetIncreaseOrderCall),
+        GetSwapOrder(GetSwapOrderCall),
+        GetUsdgMinPrice(GetUsdgMinPriceCall),
         Gov(GovCall),
-        IncreasePositionBufferBps(IncreasePositionBufferBpsCall),
-        IncreasePositionRequestKeys(IncreasePositionRequestKeysCall),
-        IncreasePositionRequestKeysStart(IncreasePositionRequestKeysStartCall),
-        IncreasePositionRequests(IncreasePositionRequestsCall),
-        IncreasePositionsIndex(IncreasePositionsIndexCall),
-        IsLeverageEnabled(IsLeverageEnabledCall),
-        IsPositionKeeper(IsPositionKeeperCall),
-        MaxGlobalLongSizes(MaxGlobalLongSizesCall),
-        MaxGlobalShortSizes(MaxGlobalShortSizesCall),
-        MaxTimeDelay(MaxTimeDelayCall),
-        MinBlockDelayKeeper(MinBlockDelayKeeperCall),
+        IncreaseOrders(IncreaseOrdersCall),
+        IncreaseOrdersIndex(IncreaseOrdersIndexCall),
+        Initialize(InitializeCall),
+        IsInitialized(IsInitializedCall),
         MinExecutionFee(MinExecutionFeeCall),
-        MinTimeDelayPublic(MinTimeDelayPublicCall),
-        ReferralStorage(ReferralStorageCall),
+        MinPurchaseTokenAmountUsd(MinPurchaseTokenAmountUsdCall),
         Router(RouterCall),
-        SendValue(SendValueCall),
-        SetAdmin(SetAdminCall),
-        SetDelayValues(SetDelayValuesCall),
-        SetDepositFee(SetDepositFeeCall),
         SetGov(SetGovCall),
-        SetIncreasePositionBufferBps(SetIncreasePositionBufferBpsCall),
-        SetIsLeverageEnabled(SetIsLeverageEnabledCall),
-        SetMaxGlobalSizes(SetMaxGlobalSizesCall),
         SetMinExecutionFee(SetMinExecutionFeeCall),
-        SetPositionKeeper(SetPositionKeeperCall),
-        SetReferralStorage(SetReferralStorageCall),
-        SetRequestKeysStartValues(SetRequestKeysStartValuesCall),
+        SetMinPurchaseTokenAmountUsd(SetMinPurchaseTokenAmountUsdCall),
+        SwapOrders(SwapOrdersCall),
+        SwapOrdersIndex(SwapOrdersIndexCall),
+        UpdateDecreaseOrder(UpdateDecreaseOrderCall),
+        UpdateIncreaseOrder(UpdateIncreaseOrderCall),
+        UpdateSwapOrder(UpdateSwapOrderCall),
+        Usdg(UsdgCall),
+        ValidatePositionOrderPrice(ValidatePositionOrderPriceCall),
+        ValidateSwapOrderPriceWithTriggerAboveThreshold(
+            ValidateSwapOrderPriceWithTriggerAboveThresholdCall,
+        ),
         Vault(VaultCall),
         Weth(WethCall),
-        WithdrawFees(WithdrawFeesCall),
     }
     impl ethers::core::abi::AbiDecode for b_contractCalls {
         fn decode(
             data: impl AsRef<[u8]>,
         ) -> ::std::result::Result<Self, ethers::core::abi::AbiError> {
             if let Ok(decoded) =
-                <BasisPointsDivisorCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <PricePrecisionCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::BasisPointsDivisor(decoded));
-            }
-            if let Ok(decoded) = <AdminCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::Admin(decoded));
+                return Ok(b_contractCalls::PricePrecision(decoded));
             }
             if let Ok(decoded) =
-                <ApproveCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <UsdgPrecisionCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::Approve(decoded));
+                return Ok(b_contractCalls::UsdgPrecision(decoded));
             }
             if let Ok(decoded) =
-                <CancelDecreasePositionCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <CancelDecreaseOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::CancelDecreasePosition(decoded));
+                return Ok(b_contractCalls::CancelDecreaseOrder(decoded));
             }
             if let Ok(decoded) =
-                <CancelIncreasePositionCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <CancelIncreaseOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::CancelIncreasePosition(decoded));
+                return Ok(b_contractCalls::CancelIncreaseOrder(decoded));
             }
             if let Ok(decoded) =
-                <CreateDecreasePositionCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <CancelMultipleCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::CreateDecreasePosition(decoded));
+                return Ok(b_contractCalls::CancelMultiple(decoded));
             }
             if let Ok(decoded) =
-                <CreateIncreasePositionCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <CancelSwapOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::CreateIncreasePosition(decoded));
+                return Ok(b_contractCalls::CancelSwapOrder(decoded));
             }
             if let Ok(decoded) =
-                <CreateIncreasePositionETHCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <CreateDecreaseOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::CreateIncreasePositionETH(decoded));
+                return Ok(b_contractCalls::CreateDecreaseOrder(decoded));
             }
             if let Ok(decoded) =
-                <DecreasePositionRequestKeysCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <CreateIncreaseOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::DecreasePositionRequestKeys(decoded));
+                return Ok(b_contractCalls::CreateIncreaseOrder(decoded));
             }
             if let Ok(decoded) =
-                <DecreasePositionRequestKeysStartCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <CreateSwapOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::DecreasePositionRequestKeysStart(decoded));
+                return Ok(b_contractCalls::CreateSwapOrder(decoded));
             }
             if let Ok(decoded) =
-                <DecreasePositionRequestsCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <DecreaseOrdersCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::DecreasePositionRequests(decoded));
+                return Ok(b_contractCalls::DecreaseOrders(decoded));
             }
             if let Ok(decoded) =
-                <DecreasePositionsIndexCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <DecreaseOrdersIndexCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::DecreasePositionsIndex(decoded));
+                return Ok(b_contractCalls::DecreaseOrdersIndex(decoded));
             }
             if let Ok(decoded) =
-                <DepositFeeCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <ExecuteDecreaseOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::DepositFee(decoded));
+                return Ok(b_contractCalls::ExecuteDecreaseOrder(decoded));
             }
             if let Ok(decoded) =
-                <ExecuteDecreasePositionCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <ExecuteIncreaseOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::ExecuteDecreasePosition(decoded));
+                return Ok(b_contractCalls::ExecuteIncreaseOrder(decoded));
             }
             if let Ok(decoded) =
-                <ExecuteDecreasePositionsCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <ExecuteSwapOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::ExecuteDecreasePositions(decoded));
+                return Ok(b_contractCalls::ExecuteSwapOrder(decoded));
             }
             if let Ok(decoded) =
-                <ExecuteIncreasePositionCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <GetDecreaseOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::ExecuteIncreasePosition(decoded));
+                return Ok(b_contractCalls::GetDecreaseOrder(decoded));
             }
             if let Ok(decoded) =
-                <ExecuteIncreasePositionsCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <GetIncreaseOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::ExecuteIncreasePositions(decoded));
+                return Ok(b_contractCalls::GetIncreaseOrder(decoded));
             }
             if let Ok(decoded) =
-                <FeeReservesCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <GetSwapOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::FeeReserves(decoded));
+                return Ok(b_contractCalls::GetSwapOrder(decoded));
             }
             if let Ok(decoded) =
-                <GetDecreasePositionRequestPathCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <GetUsdgMinPriceCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::GetDecreasePositionRequestPath(decoded));
-            }
-            if let Ok(decoded) =
-                <GetIncreasePositionRequestPathCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
-            {
-                return Ok(b_contractCalls::GetIncreasePositionRequestPath(decoded));
-            }
-            if let Ok(decoded) =
-                <GetRequestKeyCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::GetRequestKey(decoded));
-            }
-            if let Ok(decoded) =
-                <GetRequestQueueLengthsCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::GetRequestQueueLengths(decoded));
+                return Ok(b_contractCalls::GetUsdgMinPrice(decoded));
             }
             if let Ok(decoded) = <GovCall as ethers::core::abi::AbiDecode>::decode(data.as_ref()) {
                 return Ok(b_contractCalls::Gov(decoded));
             }
             if let Ok(decoded) =
-                <IncreasePositionBufferBpsCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <IncreaseOrdersCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::IncreasePositionBufferBps(decoded));
+                return Ok(b_contractCalls::IncreaseOrders(decoded));
             }
             if let Ok(decoded) =
-                <IncreasePositionRequestKeysCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <IncreaseOrdersIndexCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::IncreasePositionRequestKeys(decoded));
+                return Ok(b_contractCalls::IncreaseOrdersIndex(decoded));
             }
             if let Ok(decoded) =
-                <IncreasePositionRequestKeysStartCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <InitializeCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::IncreasePositionRequestKeysStart(decoded));
+                return Ok(b_contractCalls::Initialize(decoded));
             }
             if let Ok(decoded) =
-                <IncreasePositionRequestsCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
+                <IsInitializedCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
-                return Ok(b_contractCalls::IncreasePositionRequests(decoded));
-            }
-            if let Ok(decoded) =
-                <IncreasePositionsIndexCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::IncreasePositionsIndex(decoded));
-            }
-            if let Ok(decoded) =
-                <IsLeverageEnabledCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::IsLeverageEnabled(decoded));
-            }
-            if let Ok(decoded) =
-                <IsPositionKeeperCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::IsPositionKeeper(decoded));
-            }
-            if let Ok(decoded) =
-                <MaxGlobalLongSizesCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::MaxGlobalLongSizes(decoded));
-            }
-            if let Ok(decoded) =
-                <MaxGlobalShortSizesCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::MaxGlobalShortSizes(decoded));
-            }
-            if let Ok(decoded) =
-                <MaxTimeDelayCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::MaxTimeDelay(decoded));
-            }
-            if let Ok(decoded) =
-                <MinBlockDelayKeeperCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::MinBlockDelayKeeper(decoded));
+                return Ok(b_contractCalls::IsInitialized(decoded));
             }
             if let Ok(decoded) =
                 <MinExecutionFeeCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
@@ -2313,59 +1972,19 @@ pub mod b_contract {
                 return Ok(b_contractCalls::MinExecutionFee(decoded));
             }
             if let Ok(decoded) =
-                <MinTimeDelayPublicCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+                <MinPurchaseTokenAmountUsdCall as ethers::core::abi::AbiDecode>::decode(
+                    data.as_ref(),
+                )
             {
-                return Ok(b_contractCalls::MinTimeDelayPublic(decoded));
-            }
-            if let Ok(decoded) =
-                <ReferralStorageCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::ReferralStorage(decoded));
+                return Ok(b_contractCalls::MinPurchaseTokenAmountUsd(decoded));
             }
             if let Ok(decoded) = <RouterCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
                 return Ok(b_contractCalls::Router(decoded));
             }
-            if let Ok(decoded) =
-                <SendValueCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::SendValue(decoded));
-            }
-            if let Ok(decoded) =
-                <SetAdminCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::SetAdmin(decoded));
-            }
-            if let Ok(decoded) =
-                <SetDelayValuesCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::SetDelayValues(decoded));
-            }
-            if let Ok(decoded) =
-                <SetDepositFeeCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::SetDepositFee(decoded));
-            }
             if let Ok(decoded) = <SetGovCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
                 return Ok(b_contractCalls::SetGov(decoded));
-            }
-            if let Ok(decoded) =
-                <SetIncreasePositionBufferBpsCall as ethers::core::abi::AbiDecode>::decode(
-                    data.as_ref(),
-                )
-            {
-                return Ok(b_contractCalls::SetIncreasePositionBufferBps(decoded));
-            }
-            if let Ok(decoded) =
-                <SetIsLeverageEnabledCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::SetIsLeverageEnabled(decoded));
-            }
-            if let Ok(decoded) =
-                <SetMaxGlobalSizesCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::SetMaxGlobalSizes(decoded));
             }
             if let Ok(decoded) =
                 <SetMinExecutionFeeCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
@@ -2373,22 +1992,48 @@ pub mod b_contract {
                 return Ok(b_contractCalls::SetMinExecutionFee(decoded));
             }
             if let Ok(decoded) =
-                <SetPositionKeeperCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::SetPositionKeeper(decoded));
-            }
-            if let Ok(decoded) =
-                <SetReferralStorageCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::SetReferralStorage(decoded));
-            }
-            if let Ok(decoded) =
-                <SetRequestKeysStartValuesCall as ethers::core::abi::AbiDecode>::decode(
+                <SetMinPurchaseTokenAmountUsdCall as ethers::core::abi::AbiDecode>::decode(
                     data.as_ref(),
                 )
             {
-                return Ok(b_contractCalls::SetRequestKeysStartValues(decoded));
+                return Ok(b_contractCalls::SetMinPurchaseTokenAmountUsd(decoded));
             }
+            if let Ok(decoded) =
+                <SwapOrdersCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+            {
+                return Ok(b_contractCalls::SwapOrders(decoded));
+            }
+            if let Ok(decoded) =
+                <SwapOrdersIndexCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+            {
+                return Ok(b_contractCalls::SwapOrdersIndex(decoded));
+            }
+            if let Ok(decoded) =
+                <UpdateDecreaseOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+            {
+                return Ok(b_contractCalls::UpdateDecreaseOrder(decoded));
+            }
+            if let Ok(decoded) =
+                <UpdateIncreaseOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+            {
+                return Ok(b_contractCalls::UpdateIncreaseOrder(decoded));
+            }
+            if let Ok(decoded) =
+                <UpdateSwapOrderCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
+            {
+                return Ok(b_contractCalls::UpdateSwapOrder(decoded));
+            }
+            if let Ok(decoded) = <UsdgCall as ethers::core::abi::AbiDecode>::decode(data.as_ref()) {
+                return Ok(b_contractCalls::Usdg(decoded));
+            }
+            if let Ok(decoded) =
+                <ValidatePositionOrderPriceCall as ethers::core::abi::AbiDecode>::decode(
+                    data.as_ref(),
+                )
+            {
+                return Ok(b_contractCalls::ValidatePositionOrderPrice(decoded));
+            }
+            if let Ok (decoded) = < ValidateSwapOrderPriceWithTriggerAboveThresholdCall as ethers :: core :: abi :: AbiDecode > :: decode (data . as_ref ()) { return Ok (b_contractCalls :: ValidateSwapOrderPriceWithTriggerAboveThreshold (decoded)) }
             if let Ok(decoded) = <VaultCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
             {
                 return Ok(b_contractCalls::Vault(decoded));
@@ -2396,240 +2041,191 @@ pub mod b_contract {
             if let Ok(decoded) = <WethCall as ethers::core::abi::AbiDecode>::decode(data.as_ref()) {
                 return Ok(b_contractCalls::Weth(decoded));
             }
-            if let Ok(decoded) =
-                <WithdrawFeesCall as ethers::core::abi::AbiDecode>::decode(data.as_ref())
-            {
-                return Ok(b_contractCalls::WithdrawFees(decoded));
-            }
             Err(ethers::core::abi::Error::InvalidData.into())
         }
     }
     impl ethers::core::abi::AbiEncode for b_contractCalls {
         fn encode(self) -> Vec<u8> {
             match self {
-                b_contractCalls::BasisPointsDivisor(element) => element.encode(),
-                b_contractCalls::Admin(element) => element.encode(),
-                b_contractCalls::Approve(element) => element.encode(),
-                b_contractCalls::CancelDecreasePosition(element) => element.encode(),
-                b_contractCalls::CancelIncreasePosition(element) => element.encode(),
-                b_contractCalls::CreateDecreasePosition(element) => element.encode(),
-                b_contractCalls::CreateIncreasePosition(element) => element.encode(),
-                b_contractCalls::CreateIncreasePositionETH(element) => element.encode(),
-                b_contractCalls::DecreasePositionRequestKeys(element) => element.encode(),
-                b_contractCalls::DecreasePositionRequestKeysStart(element) => element.encode(),
-                b_contractCalls::DecreasePositionRequests(element) => element.encode(),
-                b_contractCalls::DecreasePositionsIndex(element) => element.encode(),
-                b_contractCalls::DepositFee(element) => element.encode(),
-                b_contractCalls::ExecuteDecreasePosition(element) => element.encode(),
-                b_contractCalls::ExecuteDecreasePositions(element) => element.encode(),
-                b_contractCalls::ExecuteIncreasePosition(element) => element.encode(),
-                b_contractCalls::ExecuteIncreasePositions(element) => element.encode(),
-                b_contractCalls::FeeReserves(element) => element.encode(),
-                b_contractCalls::GetDecreasePositionRequestPath(element) => element.encode(),
-                b_contractCalls::GetIncreasePositionRequestPath(element) => element.encode(),
-                b_contractCalls::GetRequestKey(element) => element.encode(),
-                b_contractCalls::GetRequestQueueLengths(element) => element.encode(),
+                b_contractCalls::PricePrecision(element) => element.encode(),
+                b_contractCalls::UsdgPrecision(element) => element.encode(),
+                b_contractCalls::CancelDecreaseOrder(element) => element.encode(),
+                b_contractCalls::CancelIncreaseOrder(element) => element.encode(),
+                b_contractCalls::CancelMultiple(element) => element.encode(),
+                b_contractCalls::CancelSwapOrder(element) => element.encode(),
+                b_contractCalls::CreateDecreaseOrder(element) => element.encode(),
+                b_contractCalls::CreateIncreaseOrder(element) => element.encode(),
+                b_contractCalls::CreateSwapOrder(element) => element.encode(),
+                b_contractCalls::DecreaseOrders(element) => element.encode(),
+                b_contractCalls::DecreaseOrdersIndex(element) => element.encode(),
+                b_contractCalls::ExecuteDecreaseOrder(element) => element.encode(),
+                b_contractCalls::ExecuteIncreaseOrder(element) => element.encode(),
+                b_contractCalls::ExecuteSwapOrder(element) => element.encode(),
+                b_contractCalls::GetDecreaseOrder(element) => element.encode(),
+                b_contractCalls::GetIncreaseOrder(element) => element.encode(),
+                b_contractCalls::GetSwapOrder(element) => element.encode(),
+                b_contractCalls::GetUsdgMinPrice(element) => element.encode(),
                 b_contractCalls::Gov(element) => element.encode(),
-                b_contractCalls::IncreasePositionBufferBps(element) => element.encode(),
-                b_contractCalls::IncreasePositionRequestKeys(element) => element.encode(),
-                b_contractCalls::IncreasePositionRequestKeysStart(element) => element.encode(),
-                b_contractCalls::IncreasePositionRequests(element) => element.encode(),
-                b_contractCalls::IncreasePositionsIndex(element) => element.encode(),
-                b_contractCalls::IsLeverageEnabled(element) => element.encode(),
-                b_contractCalls::IsPositionKeeper(element) => element.encode(),
-                b_contractCalls::MaxGlobalLongSizes(element) => element.encode(),
-                b_contractCalls::MaxGlobalShortSizes(element) => element.encode(),
-                b_contractCalls::MaxTimeDelay(element) => element.encode(),
-                b_contractCalls::MinBlockDelayKeeper(element) => element.encode(),
+                b_contractCalls::IncreaseOrders(element) => element.encode(),
+                b_contractCalls::IncreaseOrdersIndex(element) => element.encode(),
+                b_contractCalls::Initialize(element) => element.encode(),
+                b_contractCalls::IsInitialized(element) => element.encode(),
                 b_contractCalls::MinExecutionFee(element) => element.encode(),
-                b_contractCalls::MinTimeDelayPublic(element) => element.encode(),
-                b_contractCalls::ReferralStorage(element) => element.encode(),
+                b_contractCalls::MinPurchaseTokenAmountUsd(element) => element.encode(),
                 b_contractCalls::Router(element) => element.encode(),
-                b_contractCalls::SendValue(element) => element.encode(),
-                b_contractCalls::SetAdmin(element) => element.encode(),
-                b_contractCalls::SetDelayValues(element) => element.encode(),
-                b_contractCalls::SetDepositFee(element) => element.encode(),
                 b_contractCalls::SetGov(element) => element.encode(),
-                b_contractCalls::SetIncreasePositionBufferBps(element) => element.encode(),
-                b_contractCalls::SetIsLeverageEnabled(element) => element.encode(),
-                b_contractCalls::SetMaxGlobalSizes(element) => element.encode(),
                 b_contractCalls::SetMinExecutionFee(element) => element.encode(),
-                b_contractCalls::SetPositionKeeper(element) => element.encode(),
-                b_contractCalls::SetReferralStorage(element) => element.encode(),
-                b_contractCalls::SetRequestKeysStartValues(element) => element.encode(),
+                b_contractCalls::SetMinPurchaseTokenAmountUsd(element) => element.encode(),
+                b_contractCalls::SwapOrders(element) => element.encode(),
+                b_contractCalls::SwapOrdersIndex(element) => element.encode(),
+                b_contractCalls::UpdateDecreaseOrder(element) => element.encode(),
+                b_contractCalls::UpdateIncreaseOrder(element) => element.encode(),
+                b_contractCalls::UpdateSwapOrder(element) => element.encode(),
+                b_contractCalls::Usdg(element) => element.encode(),
+                b_contractCalls::ValidatePositionOrderPrice(element) => element.encode(),
+                b_contractCalls::ValidateSwapOrderPriceWithTriggerAboveThreshold(element) => {
+                    element.encode()
+                }
                 b_contractCalls::Vault(element) => element.encode(),
                 b_contractCalls::Weth(element) => element.encode(),
-                b_contractCalls::WithdrawFees(element) => element.encode(),
             }
         }
     }
     impl ::std::fmt::Display for b_contractCalls {
         fn fmt(&self, f: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
             match self {
-                b_contractCalls::BasisPointsDivisor(element) => element.fmt(f),
-                b_contractCalls::Admin(element) => element.fmt(f),
-                b_contractCalls::Approve(element) => element.fmt(f),
-                b_contractCalls::CancelDecreasePosition(element) => element.fmt(f),
-                b_contractCalls::CancelIncreasePosition(element) => element.fmt(f),
-                b_contractCalls::CreateDecreasePosition(element) => element.fmt(f),
-                b_contractCalls::CreateIncreasePosition(element) => element.fmt(f),
-                b_contractCalls::CreateIncreasePositionETH(element) => element.fmt(f),
-                b_contractCalls::DecreasePositionRequestKeys(element) => element.fmt(f),
-                b_contractCalls::DecreasePositionRequestKeysStart(element) => element.fmt(f),
-                b_contractCalls::DecreasePositionRequests(element) => element.fmt(f),
-                b_contractCalls::DecreasePositionsIndex(element) => element.fmt(f),
-                b_contractCalls::DepositFee(element) => element.fmt(f),
-                b_contractCalls::ExecuteDecreasePosition(element) => element.fmt(f),
-                b_contractCalls::ExecuteDecreasePositions(element) => element.fmt(f),
-                b_contractCalls::ExecuteIncreasePosition(element) => element.fmt(f),
-                b_contractCalls::ExecuteIncreasePositions(element) => element.fmt(f),
-                b_contractCalls::FeeReserves(element) => element.fmt(f),
-                b_contractCalls::GetDecreasePositionRequestPath(element) => element.fmt(f),
-                b_contractCalls::GetIncreasePositionRequestPath(element) => element.fmt(f),
-                b_contractCalls::GetRequestKey(element) => element.fmt(f),
-                b_contractCalls::GetRequestQueueLengths(element) => element.fmt(f),
+                b_contractCalls::PricePrecision(element) => element.fmt(f),
+                b_contractCalls::UsdgPrecision(element) => element.fmt(f),
+                b_contractCalls::CancelDecreaseOrder(element) => element.fmt(f),
+                b_contractCalls::CancelIncreaseOrder(element) => element.fmt(f),
+                b_contractCalls::CancelMultiple(element) => element.fmt(f),
+                b_contractCalls::CancelSwapOrder(element) => element.fmt(f),
+                b_contractCalls::CreateDecreaseOrder(element) => element.fmt(f),
+                b_contractCalls::CreateIncreaseOrder(element) => element.fmt(f),
+                b_contractCalls::CreateSwapOrder(element) => element.fmt(f),
+                b_contractCalls::DecreaseOrders(element) => element.fmt(f),
+                b_contractCalls::DecreaseOrdersIndex(element) => element.fmt(f),
+                b_contractCalls::ExecuteDecreaseOrder(element) => element.fmt(f),
+                b_contractCalls::ExecuteIncreaseOrder(element) => element.fmt(f),
+                b_contractCalls::ExecuteSwapOrder(element) => element.fmt(f),
+                b_contractCalls::GetDecreaseOrder(element) => element.fmt(f),
+                b_contractCalls::GetIncreaseOrder(element) => element.fmt(f),
+                b_contractCalls::GetSwapOrder(element) => element.fmt(f),
+                b_contractCalls::GetUsdgMinPrice(element) => element.fmt(f),
                 b_contractCalls::Gov(element) => element.fmt(f),
-                b_contractCalls::IncreasePositionBufferBps(element) => element.fmt(f),
-                b_contractCalls::IncreasePositionRequestKeys(element) => element.fmt(f),
-                b_contractCalls::IncreasePositionRequestKeysStart(element) => element.fmt(f),
-                b_contractCalls::IncreasePositionRequests(element) => element.fmt(f),
-                b_contractCalls::IncreasePositionsIndex(element) => element.fmt(f),
-                b_contractCalls::IsLeverageEnabled(element) => element.fmt(f),
-                b_contractCalls::IsPositionKeeper(element) => element.fmt(f),
-                b_contractCalls::MaxGlobalLongSizes(element) => element.fmt(f),
-                b_contractCalls::MaxGlobalShortSizes(element) => element.fmt(f),
-                b_contractCalls::MaxTimeDelay(element) => element.fmt(f),
-                b_contractCalls::MinBlockDelayKeeper(element) => element.fmt(f),
+                b_contractCalls::IncreaseOrders(element) => element.fmt(f),
+                b_contractCalls::IncreaseOrdersIndex(element) => element.fmt(f),
+                b_contractCalls::Initialize(element) => element.fmt(f),
+                b_contractCalls::IsInitialized(element) => element.fmt(f),
                 b_contractCalls::MinExecutionFee(element) => element.fmt(f),
-                b_contractCalls::MinTimeDelayPublic(element) => element.fmt(f),
-                b_contractCalls::ReferralStorage(element) => element.fmt(f),
+                b_contractCalls::MinPurchaseTokenAmountUsd(element) => element.fmt(f),
                 b_contractCalls::Router(element) => element.fmt(f),
-                b_contractCalls::SendValue(element) => element.fmt(f),
-                b_contractCalls::SetAdmin(element) => element.fmt(f),
-                b_contractCalls::SetDelayValues(element) => element.fmt(f),
-                b_contractCalls::SetDepositFee(element) => element.fmt(f),
                 b_contractCalls::SetGov(element) => element.fmt(f),
-                b_contractCalls::SetIncreasePositionBufferBps(element) => element.fmt(f),
-                b_contractCalls::SetIsLeverageEnabled(element) => element.fmt(f),
-                b_contractCalls::SetMaxGlobalSizes(element) => element.fmt(f),
                 b_contractCalls::SetMinExecutionFee(element) => element.fmt(f),
-                b_contractCalls::SetPositionKeeper(element) => element.fmt(f),
-                b_contractCalls::SetReferralStorage(element) => element.fmt(f),
-                b_contractCalls::SetRequestKeysStartValues(element) => element.fmt(f),
+                b_contractCalls::SetMinPurchaseTokenAmountUsd(element) => element.fmt(f),
+                b_contractCalls::SwapOrders(element) => element.fmt(f),
+                b_contractCalls::SwapOrdersIndex(element) => element.fmt(f),
+                b_contractCalls::UpdateDecreaseOrder(element) => element.fmt(f),
+                b_contractCalls::UpdateIncreaseOrder(element) => element.fmt(f),
+                b_contractCalls::UpdateSwapOrder(element) => element.fmt(f),
+                b_contractCalls::Usdg(element) => element.fmt(f),
+                b_contractCalls::ValidatePositionOrderPrice(element) => element.fmt(f),
+                b_contractCalls::ValidateSwapOrderPriceWithTriggerAboveThreshold(element) => {
+                    element.fmt(f)
+                }
                 b_contractCalls::Vault(element) => element.fmt(f),
                 b_contractCalls::Weth(element) => element.fmt(f),
-                b_contractCalls::WithdrawFees(element) => element.fmt(f),
             }
         }
     }
-    impl ::std::convert::From<BasisPointsDivisorCall> for b_contractCalls {
-        fn from(var: BasisPointsDivisorCall) -> Self {
-            b_contractCalls::BasisPointsDivisor(var)
+    impl ::std::convert::From<PricePrecisionCall> for b_contractCalls {
+        fn from(var: PricePrecisionCall) -> Self {
+            b_contractCalls::PricePrecision(var)
         }
     }
-    impl ::std::convert::From<AdminCall> for b_contractCalls {
-        fn from(var: AdminCall) -> Self {
-            b_contractCalls::Admin(var)
+    impl ::std::convert::From<UsdgPrecisionCall> for b_contractCalls {
+        fn from(var: UsdgPrecisionCall) -> Self {
+            b_contractCalls::UsdgPrecision(var)
         }
     }
-    impl ::std::convert::From<ApproveCall> for b_contractCalls {
-        fn from(var: ApproveCall) -> Self {
-            b_contractCalls::Approve(var)
+    impl ::std::convert::From<CancelDecreaseOrderCall> for b_contractCalls {
+        fn from(var: CancelDecreaseOrderCall) -> Self {
+            b_contractCalls::CancelDecreaseOrder(var)
         }
     }
-    impl ::std::convert::From<CancelDecreasePositionCall> for b_contractCalls {
-        fn from(var: CancelDecreasePositionCall) -> Self {
-            b_contractCalls::CancelDecreasePosition(var)
+    impl ::std::convert::From<CancelIncreaseOrderCall> for b_contractCalls {
+        fn from(var: CancelIncreaseOrderCall) -> Self {
+            b_contractCalls::CancelIncreaseOrder(var)
         }
     }
-    impl ::std::convert::From<CancelIncreasePositionCall> for b_contractCalls {
-        fn from(var: CancelIncreasePositionCall) -> Self {
-            b_contractCalls::CancelIncreasePosition(var)
+    impl ::std::convert::From<CancelMultipleCall> for b_contractCalls {
+        fn from(var: CancelMultipleCall) -> Self {
+            b_contractCalls::CancelMultiple(var)
         }
     }
-    impl ::std::convert::From<CreateDecreasePositionCall> for b_contractCalls {
-        fn from(var: CreateDecreasePositionCall) -> Self {
-            b_contractCalls::CreateDecreasePosition(var)
+    impl ::std::convert::From<CancelSwapOrderCall> for b_contractCalls {
+        fn from(var: CancelSwapOrderCall) -> Self {
+            b_contractCalls::CancelSwapOrder(var)
         }
     }
-    impl ::std::convert::From<CreateIncreasePositionCall> for b_contractCalls {
-        fn from(var: CreateIncreasePositionCall) -> Self {
-            b_contractCalls::CreateIncreasePosition(var)
+    impl ::std::convert::From<CreateDecreaseOrderCall> for b_contractCalls {
+        fn from(var: CreateDecreaseOrderCall) -> Self {
+            b_contractCalls::CreateDecreaseOrder(var)
         }
     }
-    impl ::std::convert::From<CreateIncreasePositionETHCall> for b_contractCalls {
-        fn from(var: CreateIncreasePositionETHCall) -> Self {
-            b_contractCalls::CreateIncreasePositionETH(var)
+    impl ::std::convert::From<CreateIncreaseOrderCall> for b_contractCalls {
+        fn from(var: CreateIncreaseOrderCall) -> Self {
+            b_contractCalls::CreateIncreaseOrder(var)
         }
     }
-    impl ::std::convert::From<DecreasePositionRequestKeysCall> for b_contractCalls {
-        fn from(var: DecreasePositionRequestKeysCall) -> Self {
-            b_contractCalls::DecreasePositionRequestKeys(var)
+    impl ::std::convert::From<CreateSwapOrderCall> for b_contractCalls {
+        fn from(var: CreateSwapOrderCall) -> Self {
+            b_contractCalls::CreateSwapOrder(var)
         }
     }
-    impl ::std::convert::From<DecreasePositionRequestKeysStartCall> for b_contractCalls {
-        fn from(var: DecreasePositionRequestKeysStartCall) -> Self {
-            b_contractCalls::DecreasePositionRequestKeysStart(var)
+    impl ::std::convert::From<DecreaseOrdersCall> for b_contractCalls {
+        fn from(var: DecreaseOrdersCall) -> Self {
+            b_contractCalls::DecreaseOrders(var)
         }
     }
-    impl ::std::convert::From<DecreasePositionRequestsCall> for b_contractCalls {
-        fn from(var: DecreasePositionRequestsCall) -> Self {
-            b_contractCalls::DecreasePositionRequests(var)
+    impl ::std::convert::From<DecreaseOrdersIndexCall> for b_contractCalls {
+        fn from(var: DecreaseOrdersIndexCall) -> Self {
+            b_contractCalls::DecreaseOrdersIndex(var)
         }
     }
-    impl ::std::convert::From<DecreasePositionsIndexCall> for b_contractCalls {
-        fn from(var: DecreasePositionsIndexCall) -> Self {
-            b_contractCalls::DecreasePositionsIndex(var)
+    impl ::std::convert::From<ExecuteDecreaseOrderCall> for b_contractCalls {
+        fn from(var: ExecuteDecreaseOrderCall) -> Self {
+            b_contractCalls::ExecuteDecreaseOrder(var)
         }
     }
-    impl ::std::convert::From<DepositFeeCall> for b_contractCalls {
-        fn from(var: DepositFeeCall) -> Self {
-            b_contractCalls::DepositFee(var)
+    impl ::std::convert::From<ExecuteIncreaseOrderCall> for b_contractCalls {
+        fn from(var: ExecuteIncreaseOrderCall) -> Self {
+            b_contractCalls::ExecuteIncreaseOrder(var)
         }
     }
-    impl ::std::convert::From<ExecuteDecreasePositionCall> for b_contractCalls {
-        fn from(var: ExecuteDecreasePositionCall) -> Self {
-            b_contractCalls::ExecuteDecreasePosition(var)
+    impl ::std::convert::From<ExecuteSwapOrderCall> for b_contractCalls {
+        fn from(var: ExecuteSwapOrderCall) -> Self {
+            b_contractCalls::ExecuteSwapOrder(var)
         }
     }
-    impl ::std::convert::From<ExecuteDecreasePositionsCall> for b_contractCalls {
-        fn from(var: ExecuteDecreasePositionsCall) -> Self {
-            b_contractCalls::ExecuteDecreasePositions(var)
+    impl ::std::convert::From<GetDecreaseOrderCall> for b_contractCalls {
+        fn from(var: GetDecreaseOrderCall) -> Self {
+            b_contractCalls::GetDecreaseOrder(var)
         }
     }
-    impl ::std::convert::From<ExecuteIncreasePositionCall> for b_contractCalls {
-        fn from(var: ExecuteIncreasePositionCall) -> Self {
-            b_contractCalls::ExecuteIncreasePosition(var)
+    impl ::std::convert::From<GetIncreaseOrderCall> for b_contractCalls {
+        fn from(var: GetIncreaseOrderCall) -> Self {
+            b_contractCalls::GetIncreaseOrder(var)
         }
     }
-    impl ::std::convert::From<ExecuteIncreasePositionsCall> for b_contractCalls {
-        fn from(var: ExecuteIncreasePositionsCall) -> Self {
-            b_contractCalls::ExecuteIncreasePositions(var)
+    impl ::std::convert::From<GetSwapOrderCall> for b_contractCalls {
+        fn from(var: GetSwapOrderCall) -> Self {
+            b_contractCalls::GetSwapOrder(var)
         }
     }
-    impl ::std::convert::From<FeeReservesCall> for b_contractCalls {
-        fn from(var: FeeReservesCall) -> Self {
-            b_contractCalls::FeeReserves(var)
-        }
-    }
-    impl ::std::convert::From<GetDecreasePositionRequestPathCall> for b_contractCalls {
-        fn from(var: GetDecreasePositionRequestPathCall) -> Self {
-            b_contractCalls::GetDecreasePositionRequestPath(var)
-        }
-    }
-    impl ::std::convert::From<GetIncreasePositionRequestPathCall> for b_contractCalls {
-        fn from(var: GetIncreasePositionRequestPathCall) -> Self {
-            b_contractCalls::GetIncreasePositionRequestPath(var)
-        }
-    }
-    impl ::std::convert::From<GetRequestKeyCall> for b_contractCalls {
-        fn from(var: GetRequestKeyCall) -> Self {
-            b_contractCalls::GetRequestKey(var)
-        }
-    }
-    impl ::std::convert::From<GetRequestQueueLengthsCall> for b_contractCalls {
-        fn from(var: GetRequestQueueLengthsCall) -> Self {
-            b_contractCalls::GetRequestQueueLengths(var)
+    impl ::std::convert::From<GetUsdgMinPriceCall> for b_contractCalls {
+        fn from(var: GetUsdgMinPriceCall) -> Self {
+            b_contractCalls::GetUsdgMinPrice(var)
         }
     }
     impl ::std::convert::From<GovCall> for b_contractCalls {
@@ -2637,59 +2233,24 @@ pub mod b_contract {
             b_contractCalls::Gov(var)
         }
     }
-    impl ::std::convert::From<IncreasePositionBufferBpsCall> for b_contractCalls {
-        fn from(var: IncreasePositionBufferBpsCall) -> Self {
-            b_contractCalls::IncreasePositionBufferBps(var)
+    impl ::std::convert::From<IncreaseOrdersCall> for b_contractCalls {
+        fn from(var: IncreaseOrdersCall) -> Self {
+            b_contractCalls::IncreaseOrders(var)
         }
     }
-    impl ::std::convert::From<IncreasePositionRequestKeysCall> for b_contractCalls {
-        fn from(var: IncreasePositionRequestKeysCall) -> Self {
-            b_contractCalls::IncreasePositionRequestKeys(var)
+    impl ::std::convert::From<IncreaseOrdersIndexCall> for b_contractCalls {
+        fn from(var: IncreaseOrdersIndexCall) -> Self {
+            b_contractCalls::IncreaseOrdersIndex(var)
         }
     }
-    impl ::std::convert::From<IncreasePositionRequestKeysStartCall> for b_contractCalls {
-        fn from(var: IncreasePositionRequestKeysStartCall) -> Self {
-            b_contractCalls::IncreasePositionRequestKeysStart(var)
+    impl ::std::convert::From<InitializeCall> for b_contractCalls {
+        fn from(var: InitializeCall) -> Self {
+            b_contractCalls::Initialize(var)
         }
     }
-    impl ::std::convert::From<IncreasePositionRequestsCall> for b_contractCalls {
-        fn from(var: IncreasePositionRequestsCall) -> Self {
-            b_contractCalls::IncreasePositionRequests(var)
-        }
-    }
-    impl ::std::convert::From<IncreasePositionsIndexCall> for b_contractCalls {
-        fn from(var: IncreasePositionsIndexCall) -> Self {
-            b_contractCalls::IncreasePositionsIndex(var)
-        }
-    }
-    impl ::std::convert::From<IsLeverageEnabledCall> for b_contractCalls {
-        fn from(var: IsLeverageEnabledCall) -> Self {
-            b_contractCalls::IsLeverageEnabled(var)
-        }
-    }
-    impl ::std::convert::From<IsPositionKeeperCall> for b_contractCalls {
-        fn from(var: IsPositionKeeperCall) -> Self {
-            b_contractCalls::IsPositionKeeper(var)
-        }
-    }
-    impl ::std::convert::From<MaxGlobalLongSizesCall> for b_contractCalls {
-        fn from(var: MaxGlobalLongSizesCall) -> Self {
-            b_contractCalls::MaxGlobalLongSizes(var)
-        }
-    }
-    impl ::std::convert::From<MaxGlobalShortSizesCall> for b_contractCalls {
-        fn from(var: MaxGlobalShortSizesCall) -> Self {
-            b_contractCalls::MaxGlobalShortSizes(var)
-        }
-    }
-    impl ::std::convert::From<MaxTimeDelayCall> for b_contractCalls {
-        fn from(var: MaxTimeDelayCall) -> Self {
-            b_contractCalls::MaxTimeDelay(var)
-        }
-    }
-    impl ::std::convert::From<MinBlockDelayKeeperCall> for b_contractCalls {
-        fn from(var: MinBlockDelayKeeperCall) -> Self {
-            b_contractCalls::MinBlockDelayKeeper(var)
+    impl ::std::convert::From<IsInitializedCall> for b_contractCalls {
+        fn from(var: IsInitializedCall) -> Self {
+            b_contractCalls::IsInitialized(var)
         }
     }
     impl ::std::convert::From<MinExecutionFeeCall> for b_contractCalls {
@@ -2697,14 +2258,9 @@ pub mod b_contract {
             b_contractCalls::MinExecutionFee(var)
         }
     }
-    impl ::std::convert::From<MinTimeDelayPublicCall> for b_contractCalls {
-        fn from(var: MinTimeDelayPublicCall) -> Self {
-            b_contractCalls::MinTimeDelayPublic(var)
-        }
-    }
-    impl ::std::convert::From<ReferralStorageCall> for b_contractCalls {
-        fn from(var: ReferralStorageCall) -> Self {
-            b_contractCalls::ReferralStorage(var)
+    impl ::std::convert::From<MinPurchaseTokenAmountUsdCall> for b_contractCalls {
+        fn from(var: MinPurchaseTokenAmountUsdCall) -> Self {
+            b_contractCalls::MinPurchaseTokenAmountUsd(var)
         }
     }
     impl ::std::convert::From<RouterCall> for b_contractCalls {
@@ -2712,44 +2268,9 @@ pub mod b_contract {
             b_contractCalls::Router(var)
         }
     }
-    impl ::std::convert::From<SendValueCall> for b_contractCalls {
-        fn from(var: SendValueCall) -> Self {
-            b_contractCalls::SendValue(var)
-        }
-    }
-    impl ::std::convert::From<SetAdminCall> for b_contractCalls {
-        fn from(var: SetAdminCall) -> Self {
-            b_contractCalls::SetAdmin(var)
-        }
-    }
-    impl ::std::convert::From<SetDelayValuesCall> for b_contractCalls {
-        fn from(var: SetDelayValuesCall) -> Self {
-            b_contractCalls::SetDelayValues(var)
-        }
-    }
-    impl ::std::convert::From<SetDepositFeeCall> for b_contractCalls {
-        fn from(var: SetDepositFeeCall) -> Self {
-            b_contractCalls::SetDepositFee(var)
-        }
-    }
     impl ::std::convert::From<SetGovCall> for b_contractCalls {
         fn from(var: SetGovCall) -> Self {
             b_contractCalls::SetGov(var)
-        }
-    }
-    impl ::std::convert::From<SetIncreasePositionBufferBpsCall> for b_contractCalls {
-        fn from(var: SetIncreasePositionBufferBpsCall) -> Self {
-            b_contractCalls::SetIncreasePositionBufferBps(var)
-        }
-    }
-    impl ::std::convert::From<SetIsLeverageEnabledCall> for b_contractCalls {
-        fn from(var: SetIsLeverageEnabledCall) -> Self {
-            b_contractCalls::SetIsLeverageEnabled(var)
-        }
-    }
-    impl ::std::convert::From<SetMaxGlobalSizesCall> for b_contractCalls {
-        fn from(var: SetMaxGlobalSizesCall) -> Self {
-            b_contractCalls::SetMaxGlobalSizes(var)
         }
     }
     impl ::std::convert::From<SetMinExecutionFeeCall> for b_contractCalls {
@@ -2757,19 +2278,49 @@ pub mod b_contract {
             b_contractCalls::SetMinExecutionFee(var)
         }
     }
-    impl ::std::convert::From<SetPositionKeeperCall> for b_contractCalls {
-        fn from(var: SetPositionKeeperCall) -> Self {
-            b_contractCalls::SetPositionKeeper(var)
+    impl ::std::convert::From<SetMinPurchaseTokenAmountUsdCall> for b_contractCalls {
+        fn from(var: SetMinPurchaseTokenAmountUsdCall) -> Self {
+            b_contractCalls::SetMinPurchaseTokenAmountUsd(var)
         }
     }
-    impl ::std::convert::From<SetReferralStorageCall> for b_contractCalls {
-        fn from(var: SetReferralStorageCall) -> Self {
-            b_contractCalls::SetReferralStorage(var)
+    impl ::std::convert::From<SwapOrdersCall> for b_contractCalls {
+        fn from(var: SwapOrdersCall) -> Self {
+            b_contractCalls::SwapOrders(var)
         }
     }
-    impl ::std::convert::From<SetRequestKeysStartValuesCall> for b_contractCalls {
-        fn from(var: SetRequestKeysStartValuesCall) -> Self {
-            b_contractCalls::SetRequestKeysStartValues(var)
+    impl ::std::convert::From<SwapOrdersIndexCall> for b_contractCalls {
+        fn from(var: SwapOrdersIndexCall) -> Self {
+            b_contractCalls::SwapOrdersIndex(var)
+        }
+    }
+    impl ::std::convert::From<UpdateDecreaseOrderCall> for b_contractCalls {
+        fn from(var: UpdateDecreaseOrderCall) -> Self {
+            b_contractCalls::UpdateDecreaseOrder(var)
+        }
+    }
+    impl ::std::convert::From<UpdateIncreaseOrderCall> for b_contractCalls {
+        fn from(var: UpdateIncreaseOrderCall) -> Self {
+            b_contractCalls::UpdateIncreaseOrder(var)
+        }
+    }
+    impl ::std::convert::From<UpdateSwapOrderCall> for b_contractCalls {
+        fn from(var: UpdateSwapOrderCall) -> Self {
+            b_contractCalls::UpdateSwapOrder(var)
+        }
+    }
+    impl ::std::convert::From<UsdgCall> for b_contractCalls {
+        fn from(var: UsdgCall) -> Self {
+            b_contractCalls::Usdg(var)
+        }
+    }
+    impl ::std::convert::From<ValidatePositionOrderPriceCall> for b_contractCalls {
+        fn from(var: ValidatePositionOrderPriceCall) -> Self {
+            b_contractCalls::ValidatePositionOrderPrice(var)
+        }
+    }
+    impl ::std::convert::From<ValidateSwapOrderPriceWithTriggerAboveThresholdCall> for b_contractCalls {
+        fn from(var: ValidateSwapOrderPriceWithTriggerAboveThresholdCall) -> Self {
+            b_contractCalls::ValidateSwapOrderPriceWithTriggerAboveThreshold(var)
         }
     }
     impl ::std::convert::From<VaultCall> for b_contractCalls {
@@ -2782,12 +2333,7 @@ pub mod b_contract {
             b_contractCalls::Weth(var)
         }
     }
-    impl ::std::convert::From<WithdrawFeesCall> for b_contractCalls {
-        fn from(var: WithdrawFeesCall) -> Self {
-            b_contractCalls::WithdrawFees(var)
-        }
-    }
-    #[doc = "Container type for all return fields from the `BASIS_POINTS_DIVISOR` function with signature `BASIS_POINTS_DIVISOR()` and selector `[18, 96, 130, 207]`"]
+    #[doc = "Container type for all return fields from the `PRICE_PRECISION` function with signature `PRICE_PRECISION()` and selector `[149, 8, 45, 37]`"]
     #[derive(
         Clone,
         Debug,
@@ -2797,8 +2343,8 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct BasisPointsDivisorReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `admin` function with signature `admin()` and selector `[248, 81, 164, 64]`"]
+    pub struct PricePrecisionReturn(pub ethers::core::types::U256);
+    #[doc = "Container type for all return fields from the `USDG_PRECISION` function with signature `USDG_PRECISION()` and selector `[74, 104, 109, 103]`"]
     #[derive(
         Clone,
         Debug,
@@ -2808,8 +2354,8 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct AdminReturn(pub ethers::core::types::Address);
-    #[doc = "Container type for all return fields from the `cancelDecreasePosition` function with signature `cancelDecreasePosition(bytes32,address)` and selector `[96, 163, 98, 226]`"]
+    pub struct UsdgPrecisionReturn(pub ethers::core::types::U256);
+    #[doc = "Container type for all return fields from the `decreaseOrders` function with signature `decreaseOrders(address,uint256)` and selector `[242, 210, 224, 27]`"]
     #[derive(
         Clone,
         Debug,
@@ -2819,65 +2365,18 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct CancelDecreasePositionReturn(pub bool);
-    #[doc = "Container type for all return fields from the `cancelIncreasePosition` function with signature `cancelIncreasePosition(bytes32,address)` and selector `[34, 95, 201, 253]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct CancelIncreasePositionReturn(pub bool);
-    #[doc = "Container type for all return fields from the `decreasePositionRequestKeys` function with signature `decreasePositionRequestKeys(uint256)` and selector `[66, 120, 85, 95]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct DecreasePositionRequestKeysReturn(pub [u8; 32]);
-    #[doc = "Container type for all return fields from the `decreasePositionRequestKeysStart` function with signature `decreasePositionRequestKeysStart()` and selector `[27, 202, 140, 240]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct DecreasePositionRequestKeysStartReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `decreasePositionRequests` function with signature `decreasePositionRequests(bytes32)` and selector `[31, 40, 81, 6]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct DecreasePositionRequestsReturn {
+    pub struct DecreaseOrdersReturn {
         pub account: ethers::core::types::Address,
-        pub index_token: ethers::core::types::Address,
+        pub collateral_token: ethers::core::types::Address,
         pub collateral_delta: ethers::core::types::U256,
+        pub index_token: ethers::core::types::Address,
         pub size_delta: ethers::core::types::U256,
         pub is_long: bool,
-        pub receiver: ethers::core::types::Address,
-        pub acceptable_price: ethers::core::types::U256,
-        pub min_out: ethers::core::types::U256,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
         pub execution_fee: ethers::core::types::U256,
-        pub block_number: ethers::core::types::U256,
-        pub block_time: ethers::core::types::U256,
-        pub withdraw_eth: bool,
     }
-    #[doc = "Container type for all return fields from the `decreasePositionsIndex` function with signature `decreasePositionsIndex(address)` and selector `[250, 68, 69, 119]`"]
+    #[doc = "Container type for all return fields from the `decreaseOrdersIndex` function with signature `decreaseOrdersIndex(address)` and selector `[213, 102, 208, 202]`"]
     #[derive(
         Clone,
         Debug,
@@ -2887,8 +2386,8 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct DecreasePositionsIndexReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `depositFee` function with signature `depositFee()` and selector `[103, 165, 39, 147]`"]
+    pub struct DecreaseOrdersIndexReturn(pub ethers::core::types::U256);
+    #[doc = "Container type for all return fields from the `getDecreaseOrder` function with signature `getDecreaseOrder(address,uint256)` and selector `[2, 96, 50, 238]`"]
     #[derive(
         Clone,
         Debug,
@@ -2898,8 +2397,17 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct DepositFeeReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `executeDecreasePosition` function with signature `executeDecreasePosition(bytes32,address)` and selector `[13, 77, 0, 61]`"]
+    pub struct GetDecreaseOrderReturn {
+        pub collateral_token: ethers::core::types::Address,
+        pub collateral_delta: ethers::core::types::U256,
+        pub index_token: ethers::core::types::Address,
+        pub size_delta: ethers::core::types::U256,
+        pub is_long: bool,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub execution_fee: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all return fields from the `getIncreaseOrder` function with signature `getIncreaseOrder(address,uint256)` and selector `[211, 186, 177, 209]`"]
     #[derive(
         Clone,
         Debug,
@@ -2909,8 +2417,18 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct ExecuteDecreasePositionReturn(pub bool);
-    #[doc = "Container type for all return fields from the `executeIncreasePosition` function with signature `executeIncreasePosition(bytes32,address)` and selector `[39, 180, 44, 15]`"]
+    pub struct GetIncreaseOrderReturn {
+        pub purchase_token: ethers::core::types::Address,
+        pub purchase_token_amount: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
+        pub index_token: ethers::core::types::Address,
+        pub size_delta: ethers::core::types::U256,
+        pub is_long: bool,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub execution_fee: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all return fields from the `getSwapOrder` function with signature `getSwapOrder(address,uint256)` and selector `[208, 212, 12, 214]`"]
     #[derive(
         Clone,
         Debug,
@@ -2920,8 +2438,18 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct ExecuteIncreasePositionReturn(pub bool);
-    #[doc = "Container type for all return fields from the `feeReserves` function with signature `feeReserves(address)` and selector `[28, 233, 203, 143]`"]
+    pub struct GetSwapOrderReturn {
+        pub path_0: ethers::core::types::Address,
+        pub path_1: ethers::core::types::Address,
+        pub path_2: ethers::core::types::Address,
+        pub amount_in: ethers::core::types::U256,
+        pub min_out: ethers::core::types::U256,
+        pub trigger_ratio: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub should_unwrap: bool,
+        pub execution_fee: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all return fields from the `getUsdgMinPrice` function with signature `getUsdgMinPrice(address)` and selector `[158, 35, 222, 92]`"]
     #[derive(
         Clone,
         Debug,
@@ -2931,60 +2459,7 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct FeeReservesReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `getDecreasePositionRequestPath` function with signature `getDecreasePositionRequestPath(bytes32)` and selector `[93, 92, 34, 232]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct GetDecreasePositionRequestPathReturn(
-        pub ::std::vec::Vec<ethers::core::types::Address>,
-    );
-    #[doc = "Container type for all return fields from the `getIncreasePositionRequestPath` function with signature `getIncreasePositionRequestPath(bytes32)` and selector `[149, 233, 187, 215]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct GetIncreasePositionRequestPathReturn(
-        pub ::std::vec::Vec<ethers::core::types::Address>,
-    );
-    #[doc = "Container type for all return fields from the `getRequestKey` function with signature `getRequestKey(address,uint256)` and selector `[98, 248, 163, 254]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct GetRequestKeyReturn(pub [u8; 32]);
-    #[doc = "Container type for all return fields from the `getRequestQueueLengths` function with signature `getRequestQueueLengths()` and selector `[242, 206, 166, 165]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct GetRequestQueueLengthsReturn(
-        pub ethers::core::types::U256,
-        pub ethers::core::types::U256,
-        pub ethers::core::types::U256,
-        pub ethers::core::types::U256,
-    );
+    pub struct GetUsdgMinPriceReturn(pub ethers::core::types::U256);
     #[doc = "Container type for all return fields from the `gov` function with signature `gov()` and selector `[18, 212, 58, 81]`"]
     #[derive(
         Clone,
@@ -2996,7 +2471,7 @@ pub mod b_contract {
         Default,
     )]
     pub struct GovReturn(pub ethers::core::types::Address);
-    #[doc = "Container type for all return fields from the `increasePositionBufferBps` function with signature `increasePositionBufferBps()` and selector `[152, 209, 224, 58]`"]
+    #[doc = "Container type for all return fields from the `increaseOrders` function with signature `increaseOrders(address,uint256)` and selector `[43, 125, 98, 144]`"]
     #[derive(
         Clone,
         Debug,
@@ -3006,53 +2481,19 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct IncreasePositionBufferBpsReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `increasePositionRequestKeys` function with signature `increasePositionRequestKeys(uint256)` and selector `[4, 34, 89, 84]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct IncreasePositionRequestKeysReturn(pub [u8; 32]);
-    #[doc = "Container type for all return fields from the `increasePositionRequestKeysStart` function with signature `increasePositionRequestKeysStart()` and selector `[155, 87, 134, 32]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct IncreasePositionRequestKeysStartReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `increasePositionRequests` function with signature `increasePositionRequests(bytes32)` and selector `[250, 249, 144, 243]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct IncreasePositionRequestsReturn {
+    pub struct IncreaseOrdersReturn {
         pub account: ethers::core::types::Address,
+        pub purchase_token: ethers::core::types::Address,
+        pub purchase_token_amount: ethers::core::types::U256,
+        pub collateral_token: ethers::core::types::Address,
         pub index_token: ethers::core::types::Address,
-        pub amount_in: ethers::core::types::U256,
-        pub min_out: ethers::core::types::U256,
         pub size_delta: ethers::core::types::U256,
         pub is_long: bool,
-        pub acceptable_price: ethers::core::types::U256,
+        pub trigger_price: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
         pub execution_fee: ethers::core::types::U256,
-        pub block_number: ethers::core::types::U256,
-        pub block_time: ethers::core::types::U256,
-        pub has_collateral_in_eth: bool,
     }
-    #[doc = "Container type for all return fields from the `increasePositionsIndex` function with signature `increasePositionsIndex(address)` and selector `[99, 52, 81, 222]`"]
+    #[doc = "Container type for all return fields from the `increaseOrdersIndex` function with signature `increaseOrdersIndex(address)` and selector `[174, 194, 36, 85]`"]
     #[derive(
         Clone,
         Debug,
@@ -3062,8 +2503,8 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct IncreasePositionsIndexReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `isLeverageEnabled` function with signature `isLeverageEnabled()` and selector `[62, 114, 162, 98]`"]
+    pub struct IncreaseOrdersIndexReturn(pub ethers::core::types::U256);
+    #[doc = "Container type for all return fields from the `isInitialized` function with signature `isInitialized()` and selector `[57, 46, 83, 205]`"]
     #[derive(
         Clone,
         Debug,
@@ -3073,62 +2514,7 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct IsLeverageEnabledReturn(pub bool);
-    #[doc = "Container type for all return fields from the `isPositionKeeper` function with signature `isPositionKeeper(address)` and selector `[54, 235, 164, 138]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct IsPositionKeeperReturn(pub bool);
-    #[doc = "Container type for all return fields from the `maxGlobalLongSizes` function with signature `maxGlobalLongSizes(address)` and selector `[16, 69, 199, 78]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct MaxGlobalLongSizesReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `maxGlobalShortSizes` function with signature `maxGlobalShortSizes(address)` and selector `[150, 152, 210, 90]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct MaxGlobalShortSizesReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `maxTimeDelay` function with signature `maxTimeDelay()` and selector `[203, 2, 105, 201]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct MaxTimeDelayReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `minBlockDelayKeeper` function with signature `minBlockDelayKeeper()` and selector `[88, 65, 252, 170]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct MinBlockDelayKeeperReturn(pub ethers::core::types::U256);
+    pub struct IsInitializedReturn(pub bool);
     #[doc = "Container type for all return fields from the `minExecutionFee` function with signature `minExecutionFee()` and selector `[99, 174, 33, 3]`"]
     #[derive(
         Clone,
@@ -3140,7 +2526,7 @@ pub mod b_contract {
         Default,
     )]
     pub struct MinExecutionFeeReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `minTimeDelayPublic` function with signature `minTimeDelayPublic()` and selector `[58, 42, 128, 199]`"]
+    #[doc = "Container type for all return fields from the `minPurchaseTokenAmountUsd` function with signature `minPurchaseTokenAmountUsd()` and selector `[141, 225, 12, 46]`"]
     #[derive(
         Clone,
         Debug,
@@ -3150,18 +2536,7 @@ pub mod b_contract {
         ethers :: contract :: EthAbiCodec,
         Default,
     )]
-    pub struct MinTimeDelayPublicReturn(pub ethers::core::types::U256);
-    #[doc = "Container type for all return fields from the `referralStorage` function with signature `referralStorage()` and selector `[0, 108, 195, 94]`"]
-    #[derive(
-        Clone,
-        Debug,
-        Eq,
-        PartialEq,
-        ethers :: contract :: EthAbiType,
-        ethers :: contract :: EthAbiCodec,
-        Default,
-    )]
-    pub struct ReferralStorageReturn(pub ethers::core::types::Address);
+    pub struct MinPurchaseTokenAmountUsdReturn(pub ethers::core::types::U256);
     #[doc = "Container type for all return fields from the `router` function with signature `router()` and selector `[248, 135, 234, 64]`"]
     #[derive(
         Clone,
@@ -3173,6 +2548,69 @@ pub mod b_contract {
         Default,
     )]
     pub struct RouterReturn(pub ethers::core::types::Address);
+    #[doc = "Container type for all return fields from the `swapOrders` function with signature `swapOrders(address,uint256)` and selector `[121, 34, 31, 162]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthAbiType,
+        ethers :: contract :: EthAbiCodec,
+        Default,
+    )]
+    pub struct SwapOrdersReturn {
+        pub account: ethers::core::types::Address,
+        pub amount_in: ethers::core::types::U256,
+        pub min_out: ethers::core::types::U256,
+        pub trigger_ratio: ethers::core::types::U256,
+        pub trigger_above_threshold: bool,
+        pub should_unwrap: bool,
+        pub execution_fee: ethers::core::types::U256,
+    }
+    #[doc = "Container type for all return fields from the `swapOrdersIndex` function with signature `swapOrdersIndex(address)` and selector `[0, 207, 6, 107]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthAbiType,
+        ethers :: contract :: EthAbiCodec,
+        Default,
+    )]
+    pub struct SwapOrdersIndexReturn(pub ethers::core::types::U256);
+    #[doc = "Container type for all return fields from the `usdg` function with signature `usdg()` and selector `[245, 185, 27, 123]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthAbiType,
+        ethers :: contract :: EthAbiCodec,
+        Default,
+    )]
+    pub struct UsdgReturn(pub ethers::core::types::Address);
+    #[doc = "Container type for all return fields from the `validatePositionOrderPrice` function with signature `validatePositionOrderPrice(bool,uint256,address,bool,bool)` and selector `[76, 84, 240, 176]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthAbiType,
+        ethers :: contract :: EthAbiCodec,
+        Default,
+    )]
+    pub struct ValidatePositionOrderPriceReturn(pub ethers::core::types::U256, pub bool);
+    #[doc = "Container type for all return fields from the `validateSwapOrderPriceWithTriggerAboveThreshold` function with signature `validateSwapOrderPriceWithTriggerAboveThreshold(address[],uint256)` and selector `[196, 161, 130, 27]`"]
+    #[derive(
+        Clone,
+        Debug,
+        Eq,
+        PartialEq,
+        ethers :: contract :: EthAbiType,
+        ethers :: contract :: EthAbiCodec,
+        Default,
+    )]
+    pub struct ValidateSwapOrderPriceWithTriggerAboveThresholdReturn(pub bool);
     #[doc = "Container type for all return fields from the `vault` function with signature `vault()` and selector `[251, 250, 119, 207]`"]
     #[derive(
         Clone,
